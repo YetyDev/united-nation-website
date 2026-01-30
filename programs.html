@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - United Youth Nigeria Movement</title>
+    <meta name="description"
+        content="Explore our youth empowerment programs designed to develop leadership, entrepreneurship, and community impact.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css?v=1">
+
+    <style>
+        .page-header {
+            background-color: var(--primary-blue);
+            padding: 100px 0 100px;
+            text-align: center;
+            color: var(--text-white);
+            position: relative;
+
+        }
+
+        .page-header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(30, 41, 59, 0.85);
+            z-index: 1;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .program-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .program-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .program-content {
+            padding: 30px;
+        }
+
+        .program-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .program-description {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .program-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .program-features li {
+            padding: 8px 0;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .program-features li i {
+            color: var(--accent-green);
+            font-size: 14px;
+        }
+
+        .impact-stats {
+            background: linear-gradient(135deg, var(--primary-blue), #1e5180);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff, var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .testimonial-section {
+            background: #f8fafc;
+            padding: 80px 0;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-top: 30px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
+        }
+
+        .author-info h4 {
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-info-bar">
+        <div class="container top-info-container">
+            <div class="phone-info">
+                <i class="fas fa-phone-alt"></i>
+                <span>Phone: 09046647990</span>
+            </div>
+            <div class="top-search-bar">
+                <input type="text" placeholder="Search..." class="top-search-input">
+                <button class="top-search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="top-social-icons">
+                <a href="#" aria-label="Yahoo"><i class="fab fa-yahoo"></i></a>
+                <a href="#" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="Ellipse 3.png" alt="United Youth Nigeria Movement Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="programs.html" class="nav-link active">Program & Event</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">News & Update</a></li>
+                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary nav-btn">Become a member</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header"
+            style="background-image: url('hero-bg.png'); background-size: cover; background-position: center;">
+            <div class="page-header-overlay"></div>
+            <div class="container page-header-content">
+                <p class="section-subtitle">Empowering Youth</p>
+                <h1 class="hero-title" style="margin-bottom: 0;">Our Programs</h1>
+            </div>
+        </section>
+
+        <!-- Programs Introduction -->
+        <section class="about-page-section">
+            <div class="container" style="max-width: 900px; text-align: center;">
+                <p class="section-subtitle">What We Offer</p>
+                <h2 class="section-title">Transformative Programs for Nigerian Youth</h2>
+                <p class="about-description" style="margin-top: 20px;">
+                    Our comprehensive programs are designed to equip young Nigerians with the skills, knowledge, and
+                    networks needed to become leaders and change-makers in their communities. Each program is carefully
+                    crafted to address real-world challenges and create lasting impact.
+                </p>
+            </div>
+        </section>
+
+        <!-- Programs Grid -->
+        <section style="background: #f8fafc;">
+            <div class="container">
+                <div class="programs-grid">
+                    <!-- Leadership Development Program -->
+                    <div class="program-card">
+                        <img src="hero_slide_1.png" alt="Leadership Development" class="program-image">
+                        <div class="program-content">
+                            <h3 class="program-title">Leadership Development</h3>
+                            <p class="program-description">
+                                Build essential leadership skills through intensive training, mentorship, and real-world
+                                application. Transform into a confident leader capable of driving change.
+                            </p>
+                            <ul class="program-features">
+                                <li><i class="fas fa-check-circle"></i> Executive coaching sessions</li>
+                                <li><i class="fas fa-check-circle"></i> Strategic thinking workshops</li>
+                                <li><i class="fas fa-check-circle"></i> Peer-to-peer learning</li>
+                                <li><i class="fas fa-check-circle"></i> Leadership certification</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Entrepreneurship & Innovation -->
+                    <div class="program-card">
+                        <img src="hero_slide_2.png" alt="Entrepreneurship Program" class="program-image">
+                        <div class="program-content">
+                            <h3 class="program-title">Entrepreneurship & Innovation</h3>
+                            <p class="program-description">
+                                Turn your innovative ideas into successful ventures with our comprehensive
+                                entrepreneurship
+                                program, featuring startup funding opportunities and business mentorship.
+                            </p>
+                            <ul class="program-features">
+                                <li><i class="fas fa-check-circle"></i> Business plan development</li>
+                                <li><i class="fas fa-check-circle"></i> Access to startup funding</li>
+                                <li><i class="fas fa-check-circle"></i> Mentorship by industry experts</li>
+                                <li><i class="fas fa-check-circle"></i> Pitch competition opportunities</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Civic Engagement & Advocacy -->
+                    <div class="program-card">
+                        <img src="hero_slide_3.png" alt="Civic Engagement" class="program-image">
+                        <div class="program-content">
+                            <h3 class="program-title">Civic Engagement & Advocacy</h3>
+                            <p class="program-description">
+                                Become an active participant in shaping Nigeria's future through civic education,
+                                community projects, and advocacy initiatives that create meaningful change.
+                            </p>
+                            <ul class="program-features">
+                                <li><i class="fas fa-check-circle"></i> Community service projects</li>
+                                <li><i class="fas fa-check-circle"></i> Policy advocacy training</li>
+                                <li><i class="fas fa-check-circle"></i> Voter education campaigns</li>
+                                <li><i class="fas fa-check-circle"></i> Social impact initiatives</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Skills & Career Development -->
+                    <div class="program-card">
+                        <img src="membership-bg.png" alt="Skills Development" class="program-image">
+                        <div class="program-content">
+                            <h3 class="program-title">Skills & Career Development</h3>
+                            <p class="program-description">
+                                Master in-demand skills and accelerate your career through professional training,
+                                internships, and networking opportunities with leading organizations.
+                            </p>
+                            <ul class="program-features">
+                                <li><i class="fas fa-check-circle"></i> Technical skills training</li>
+                                <li><i class="fas fa-check-circle"></i> Internship placements</li>
+                                <li><i class="fas fa-check-circle"></i> Career counseling</li>
+                                <li><i class="fas fa-check-circle"></i> Industry networking events</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Digital Literacy Program -->
+                    <div class="program-card">
+                        <img src="join.jpg" alt="Digital Literacy" class="program-image">
+                        <div class="program-content">
+                            <h3 class="program-title">Digital Literacy & Tech</h3>
+                            <p class="program-description">
+                                Gain essential digital skills for the 21st century, from basic computer literacy to
+                                advanced programming and digital marketing.
+                            </p>
+                            <ul class="program-features">
+                                <li><i class="fas fa-check-circle"></i> Coding bootcamps</li>
+                                <li><i class="fas fa-check-circle"></i> Digital marketing courses</li>
+                                <li><i class="fas fa-check-circle"></i> Data analysis training</li>
+                                <li><i class="fas fa-check-circle"></i> Tech certification programs</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Women in Leadership -->
+                    <div class="program-card">
+                        <img src="africa.jpg" alt="Women in Leadership" class="program-image">
+                        <div class="program-content">
+                            <h3 class="program-title">Women in Leadership</h3>
+                            <p class="program-description">
+                                Empowering young women to break barriers and assume leadership positions across all
+                                sectors of society through targeted mentorship and capacity building.
+                            </p>
+                            <ul class="program-features">
+                                <li><i class="fas fa-check-circle"></i> Women mentorship circles</li>
+                                <li><i class="fas fa-check-circle"></i> Confidence building workshops</li>
+                                <li><i class="fas fa-check-circle"></i> Networking with female leaders</li>
+                                <li><i class="fas fa-check-circle"></i> Gender advocacy training</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Statistics -->
+        <section class="impact-stats">
+            <div class="container">
+                <h2 class="section-title" style="color: white; margin-bottom: 10px;">Our Impact So Far</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Making a real difference in communities
+                    across Nigeria</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">2,500+</div>
+                        <div class="stat-label">Youth Trained</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Startups Launched</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">Employment Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">36</div>
+                        <div class="stat-label">States Reached</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial -->
+        <section class="testimonial-section">
+            <div class="container" style="max-width: 900px;">
+                <h2 class="section-title" style="text-align: center;">Success Stories</h2>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "The Leadership Development Program completely transformed my perspective. I went from being
+                        uncertain about my future to confidently leading a team of 20 people in a tech startup. The
+                        mentorship and practical skills I gained were invaluable."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Chioma Adeyemi</h4>
+                            <p>Program Alumni, Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="register" class="register-section">
+            <div class="container register-container">
+                <div class="register-text-col">
+                    <p class="section-subtitle" style="text-align: left;">Join a Program</p>
+                    <h2 class="register-title">Ready to Transform Your Future?</h2>
+                    <p class="register-description">
+                        Take the first step towards becoming a leader and change-maker. Our programs are open to all
+                        young Nigerians committed to personal growth and national development.
+                    </p>
+                    <p class="register-description">
+                        Applications are reviewed on a rolling basis. Don't miss this opportunity!
+                    </p>
+                </div>
+
+                <div class="register-form-col">
+                    <div class="register-form-box">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Full Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="Email Address">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="program">Select Program</label>
+                                <select id="program" class="form-control">
+                                    <option value="" disabled selected>Choose a program</option>
+                                    <option value="leadership">Leadership Development</option>
+                                    <option value="entrepreneurship">Entrepreneurship & Innovation</option>
+                                    <option value="civic">Civic Engagement & Advocacy</option>
+                                    <option value="skills">Skills & Career Development</option>
+                                    <option value="digital">Digital Literacy & Tech</option>
+                                    <option value="women">Women in Leadership</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Why do you want to join this program?</label>
+                                <textarea id="message" class="form-control" rows="4"
+                                    placeholder="Tell us about your goals..."></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms">
+                                <label for="terms">I agree to terms and conditions</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-register">Apply Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div id="newsletter" class="newsletter">
+            <div class="container newsletter-container">
+                <div class="newsletter-text">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter to get latest updates.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <p>Empowering the next generation of leaders to build a sustainable future.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Email: info@uynm.org</p>
+                <p>Phone: +234 800 123 4567</p>
+            </div>
+            <div class="footer-col">
+                <h4>Gallery</h4>
+                <div class="footer-gallery">
+                    <img src="https://via.placeholder.com/80x80" alt="Gallery 1">
+                    <img src="https://via.placeholder.com/80x80" alt="Gallery 2">
+                    <img src="https://via.placeholder.com/80x80" alt="Gallery 3">
+                    <img src="https://via.placeholder.com/80x80" alt="Gallery 4">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 United Youth Nigeria Movement. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

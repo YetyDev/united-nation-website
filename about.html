@@ -56,6 +56,29 @@
 
 <body>
 
+    <!-- Top Info Bar -->
+    <div class="top-info-bar">
+        <div class="container top-info-container">
+            <div class="phone-info">
+                <i class="fas fa-phone-alt"></i>
+                <span>Phone: 09046647990</span>
+            </div>
+            <div class="top-search-bar">
+                <input type="text" placeholder="Search..." class="top-search-input">
+                <button class="top-search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="top-social-icons">
+                <a href="#" aria-label="Yahoo"><i class="fab fa-yahoo"></i></a>
+                <a href="#" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container navbar-container">
@@ -70,9 +93,9 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Program & Event</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="programs.html" class="nav-link">Program & Event</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">News & Update</a></li>
+                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
             </ul>
             <a href="#" class="btn btn-primary nav-btn">Become a member</a>
         </div>
@@ -91,15 +114,50 @@
         </section>
 
         <!-- About Section Content -->
-        <section id="about" class="about" style="background: none;">
-            <div class="container">
-                <div class="about-content" style="max-width: 900px;">
-                    <p style="color: var(--text-dark);">The United Youth Nigeria Movement (UYNM) is a transformative
-                        platform focused on empowering young
-                        Nigerians with the skills, knowledge, and opportunities needed to drive positive change. It is a
-                        call to action for talented, passionate, and visionary youth to take the lead in solving the
-                        nation's most pressing challenges. Our work is bringing everyone on board to ensure no one is
-                        left behind as we strive to create a common goal, building a better Nigeria for all.</p>
+        <section id="about" class="about-page-section">
+            <div class="container about-page-container">
+                <!-- Left Column: Visuals -->
+                <div class="about-visuals">
+                    <div class="main-image-container">
+                        <img src="hero_slide_1.png" alt="United Youth Nigeria Movement Team" class="about-main-img">
+                        <div class="floating-badge">
+                            <div class="badge-avatars">
+                                <img src="https://via.placeholder.com/30" alt="Member">
+                                <img src="https://via.placeholder.com/30" alt="Member">
+                                <img src="https://via.placeholder.com/30" alt="Member">
+                                <span class="avatar-plus">+</span>
+                            </div>
+                            <div class="badge-text">
+                                <strong>230+</strong>
+                                <span>Active Members</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Text -->
+                <div class="about-text-content">
+                    <p class="section-subtitle" style="text-align: left;">Who We Are</p>
+                    <h2 class="about-title">United Youth Agency Movement (UYNM)</h2>
+
+                    <p class="about-description">
+                        The United Youth Nigeria Movement (UYNM) is a transformative platform focused on empowering
+                        young Nigerians with the skills, knowledge, and opportunities needed to drive positive change.
+                    </p>
+
+                    <h3 class="about-subheading">Our Commitment</h3>
+                    <p class="about-description">
+                        UNYM is dedicated to creating a generation of leaders who are not afraid to take initiative and
+                        contribute meaningfully to Nigeria's growth and development.
+                    </p>
+
+                    <h3 class="about-subheading">Join the Movement</h3>
+                    <p class="about-description">
+                        We believe that by coming together, we can achieve more. Join us as we work towards a brighter
+                        future for our nation.
+                    </p>
+
+                    <a href="#" class="btn btn-primary" style="margin-top: 10px;">Become a Member</a>
                 </div>
             </div>
         </section>
@@ -160,65 +218,110 @@
             </div>
         </section>
 
-        <!-- Who Can Join Us Section -->
-        <section id="who-join" class="core-values" style="background-color: var(--primary-blue); margin-top: 0;">
-            <div class="container who-join-container">
-                <h2 class="section-title wj-title" style="color: var(--accent-gold);">Who can join us</h2>
-                <ul class="wj-list">
-                    <li><i class="fas fa-check-circle"></i> Visionary young leaders</li>
-                    <li><i class="fas fa-check-circle"></i> Innovative thinkers and entrepreneurs</li>
-                    <li><i class="fas fa-check-circle"></i> Community development advocates</li>
-                    <li><i class="fas fa-check-circle"></i> Students and researchers</li>
-                    <li><i class="fas fa-check-circle"></i> Change-makers ready to challenge the status quo</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Membership CTA Section -->
-        <section id="membership" class="membership">
-            <div class="membership-overlay"></div>
-            <div class="container membership-content">
-                <h2 class="section-title" style="color: var(--text-white);">Become a Member</h2>
-                <p>Join the movement today and be part of the change you wish to see.</p>
-                <a href="#" class="btn btn-primary">Join Now</a>
-            </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section id="newsletter" class="newsletter">
-            <div class="container newsletter-container">
-                <div class="newsletter-text">
-                    <h2>Stay Updated</h2>
-                    <p>Subscribe to our newsletter to get latest updates.</p>
+        <!-- Registration Form Section -->
+        <section id="register" class="register-section">
+            <div class="container register-container">
+                <!-- Left Side Text -->
+                <div class="register-text-col">
+                    <p class="section-subtitle" style="text-align: left;">Register now to</p>
+                    <h2 class="register-title">Register Now</h2>
+                    <p class="register-description">
+                        All members must agree to our terms and conditions.
+                    </p>
+                    <p class="register-description">
+                        Your path to making a difference starts here.
+                    </p>
                 </div>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
+
+                <!-- Right Side Form -->
+                <div class="register-form-col">
+                    <div class="register-form-box">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Full Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="Email Address">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="job">Job</label>
+                                    <input type="text" id="job" class="form-control" placeholder="Job Title">
+                                </div>
+                                <div class="form-group half">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" class="form-control" placeholder="City">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="expectations">What do you hope to gain / contribute?</label>
+                                <select id="expectations" class="form-control">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="gain">Gain Skills</option>
+                                    <option value="contribute">Contribute Expertise</option>
+                                    <option value="both">Both</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms">
+                                <label for="terms">I agree to terms and conditions</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-register">Join</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
+
 
     </main>
 
     <!-- Footer -->
     <footer class="footer">
+        <div id="newsletter" class="newsletter">
+            <div class="container newsletter-container">
+                <div class="newsletter-text">
+                    <h2>Stay Updated</h2>
+                    <p>Stay up to date on our Empowerment, events, research and more</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
         <div class="container footer-container">
             <div class="footer-col">
-                <p>Empowering the next generation of leaders to build a sustainable future.</p>
+                <p>United Youth Nigeria Movement (UYNM) is a transformative platform focused on empowering young
+                    Nigerians with the skills, knowledge, and opportunities needed to drive positive change.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="#">Programs</a></li>
-                    <li><a href="#">Get Involved</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="blog.html">News & Update</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contact Us</h4>
-                <p>Email: info@uynm.org</p>
-                <p>Phone: +234 800 123 4567</p>
+                <h4>Get in touch with us</h4>
+                <p>For More Information, Kindly Get in touch with us. Nigeria</p>
+                <p><i class="fas fa-phone"></i> Phone: 09046647990</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-yahoo"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
             <div class="footer-col">
                 <h4>Gallery</h4>

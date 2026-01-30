@@ -40,4 +40,37 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[currentSlide].classList.add('active');
         }, slideInterval);
     }
+
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            item.classList.toggle('active');
+        });
+    });
+
+    // FAQ Category Tabs
+    const faqTabs = document.querySelectorAll('.faq-tab');
+    const faqCategories = document.querySelectorAll('.faq-category');
+
+    faqTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const category = tab.getAttribute('data-category');
+
+            // Update active tab
+            faqTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Show current category, hide others
+            faqCategories.forEach(cat => {
+                if (cat.getAttribute('data-category') === category) {
+                    cat.style.display = 'block';
+                } else {
+                    cat.style.display = 'none';
+                }
+            });
+        });
+    });
 });
+
