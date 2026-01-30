@@ -306,10 +306,17 @@ section {
 
 .nav-btn {
     margin-left: 20px;
+    width: auto;
+    padding: 10px 24px;
+    font-size: 0.9rem;
 }
 
 .nav-btn-mobile {
     display: none;
+    width: auto;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    margin: 20px auto;
 }
 
 /* Mobile Menu Toggle */
