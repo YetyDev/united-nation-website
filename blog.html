@@ -25,30 +25,31 @@
 <body>
 
     <!-- Top Info Bar -->
+    <!-- Top Info Bar -->
     <div class="top-info-bar">
         <div class="container top-info-container">
-            <div class="hotline-info">
+            <div class="phone-info">
                 <i class="fas fa-phone-alt"></i>
-                <span>Hotline: 09043423190</span>
+                <span>Phone: 09046647990</span>
             </div>
-            <div class="top-right-info">
-                <div class="social-icons">
-                    <a href="#" aria-label="Yahoo"><i class="fab fa-yahoo"></i></a>
-                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <button class="search-icon-btn" aria-label="Search">
+            <div class="top-search-bar">
+                <input type="text" placeholder="Search..." class="top-search-input">
+                <button class="top-search-btn" aria-label="Search">
                     <i class="fas fa-search"></i>
                 </button>
+            </div>
+            <div class="top-social-icons">
+                <a href="#" aria-label="Yahoo"><i class="fab fa-yahoo"></i></a>
+                <a href="#" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar scrolled" id="navbar">
+    <nav class="navbar" id="navbar" style="background-color: var(--primary-blue);">
         <div class="container navbar-container">
             <a href="index.html" class="logo">
                 <img src="Ellipse 3.png" alt="United Youth Nigeria Movement Logo">
@@ -61,9 +62,10 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="programs.html" class="nav-link">Program & Event</a></li>
+                <li class="nav-item"><a href="programs.html" class="nav-link active">Program & Event</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link">News & Update</a></li>
                 <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="#" class="btn btn-primary nav-btn-mobile">Become a member</a></li>
             </ul>
             <a href="#" class="btn btn-primary nav-btn">Become a member</a>
         </div>
@@ -71,12 +73,15 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Blog Hero Section -->
-        <section class="blog-hero">
-            <div class="blog-hero-overlay"></div>
-            <div class="container blog-hero-content">
-                <p class="blog-hero-subtitle">8/25/2025</p>
-                <h1 class="blog-hero-title">Latest News and Update</h1>
+        <!-- Page Header -->
+        <section class="page-header"
+            style="background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
+            <div class="page-header-overlay"></div>
+            <div class="container page-header-content">
+                <p class="section-subtitle">30th/01/2026</p>
+                <h1 class="hero-title"
+                    style="margin-bottom: 0; font-size: 40px; font-weight: 700; text-align: center; color: white;">
+                    Latest News and Update</h1>
             </div>
         </section>
 
