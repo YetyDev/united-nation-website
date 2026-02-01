@@ -41,12 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }, slideInterval);
     }
 
-    // FAQ Accordion
-    const faqQuestions = document.querySelectorAll('.faq-question');
+    // FAQ Accordion (Supports both main FAQ page and Home page)
+    const faqQuestions = document.querySelectorAll('.faq-question, .faq-acc-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
             const item = question.parentElement;
             item.classList.toggle('active');
+
+            // For the plus/minus icon toggle on home page if needed
+            const icon = question.querySelector('i');
+            if (icon && icon.classList.contains('fa-plus')) {
+                // The icon rotation is handled by CSS, but we could swap classes if not using rotation
+            }
         });
     });
 
@@ -72,5 +78,98 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter-number');
+    const counterOptions = {
+        threshold: 0.5
+    };
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                let start = 0;
+                const increment = target / (duration / 16); // 60fps
+
+                const updateCount = () => {
+                    if (start < target) {
+                        start += increment;
+                        counter.innerText = Math.ceil(start).toLocaleString() + '+';
+                        setTimeout(updateCount, 16);
+                    } else {
+                        counter.innerText = target.toLocaleString() + '+';
+                    }
+                };
+
+                updateCount();
+                observer.unobserve(counter);
+            }
+        });
+    }, counterOptions);
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+
+    /* Counter Animation (Kept but without reveal dependency) */
+
+    // Drag-to-Scroll for Program Highlights
+    const slider = document.querySelector('.program-carousel');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    if (slider) {
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+            slider.style.scrollSnapType = 'none'; // Disable snapping while dragging
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.style.scrollSnapType = 'x mandatory';
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.style.scrollSnapType = 'x mandatory';
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+    // Back to Top Logic
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Testimonial Slider logic removed for static grid display
 });
 

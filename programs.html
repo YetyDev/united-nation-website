@@ -23,12 +23,28 @@
 
     <style>
         .page-header {
-            background-color: var(--primary-blue);
-            padding: 100px 0 100px;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             color: var(--text-white);
             position: relative;
+            margin-top: -128px;
+            padding-top: 128px;
+            overflow: hidden;
+        }
 
+        .page-header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: kenburns 15s ease-out infinite alternate;
+            z-index: 0;
         }
 
         .page-header-overlay {
@@ -37,7 +53,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(30, 41, 59, 0.85);
+            background: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
             z-index: 1;
         }
 
@@ -48,9 +64,9 @@
 
         .programs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 0px;
         }
 
         .program-card {
@@ -58,53 +74,108 @@
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            height: 380px;
         }
 
         .program-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
         }
 
         .program-image {
             width: 100%;
-            height: 250px;
+            height: 100%;
             object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .program-card:hover .program-image {
+            transform: scale(1.1);
         }
 
         .program-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             padding: 30px;
+            background: linear-gradient(to top, rgba(30, 41, 59, 0.9) 0%, rgba(30, 41, 59, 0.2) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            transition: all 0.4s ease;
+            z-index: 2;
+            color: white;
+        }
+
+        .program-card:hover .program-content {
+            background: rgba(30, 41, 59, 0.95);
+            justify-content: center;
         }
 
         .program-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            color: var(--text-dark);
+            color: white;
             margin-bottom: 15px;
+            transition: all 0.4s ease;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
-        .program-description {
-            color: var(--text-gray);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
+        .program-description,
         .program-features {
-            list-style: none;
-            padding: 0;
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+            margin: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .program-card:hover .program-description,
+        .program-card:hover .program-features {
+            opacity: 1;
+            visibility: visible;
+            height: auto;
+            margin-bottom: 20px;
+            transform: translateY(0);
+        }
+
+        .program-card:hover .program-features {
             margin-bottom: 25px;
         }
 
+        .program-content .btn {
+            margin-top: 10px;
+            padding: 8px 20px;
+            width: auto;
+            min-width: 140px;
+            font-size: 0.85rem;
+            transform: translateY(0);
+            transition: all 0.4s ease;
+        }
+
+        .program-card:hover .program-title {
+            text-shadow: none;
+        }
+
         .program-features li {
-            padding: 8px 0;
-            color: var(--text-gray);
+            padding: 5px 0;
+            color: rgba(255, 255, 255, 0.8);
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
+            font-size: 0.9rem;
         }
 
         .program-features li i {
-            color: var(--accent-green);
+            color: var(--accent-gold);
             font-size: 14px;
         }
 
@@ -130,7 +201,7 @@
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 10px;
-            background: linear-gradient(135deg, #fff, var(--accent-green));
+            background: linear-gradient(135deg, #fff, var(--accent-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -172,7 +243,7 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-gold));
         }
 
         .author-info h4 {
@@ -225,33 +296,36 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="programs.html" class="nav-link active">Program & Event</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">News & Update</a></li>
-                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                <li class="nav-item"><a href="#" class="btn btn-primary nav-btn-mobile">Become a member</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="programs.html" class="nav-link active">Programs</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
+                <li class="nav-item"><a href="roadmap.html" class="nav-link">Impact</a></li>
+                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
             </ul>
-            <a href="#" class="btn btn-primary nav-btn">Become a member</a>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-link login-btn">Sign Up</a>
+                <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+            </div>
         </div>
     </nav>
 
     <!-- Main Content -->
     <main>
         <!-- Page Header -->
-        <section class="page-header"
-            style="background-image: url('hero-bg.png'); background-size: cover; background-position: center;">
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url('hero-bg.png');"></div>
             <div class="page-header-overlay"></div>
-            <div class="container page-header-content">
-                <p class="section-subtitle">Empowering Youth</p>
-                <h1 class="hero-title" style="margin-bottom: 0;">Our Programs</h1>
+            <div class="container page-header-content reveal-up">
+                <h1 class="hero-title" style="margin-bottom: 16px; padding-top: 50px;">Our Programs</h1>
+                <p class="section-subtitle" style="color: var(--accent-gold); margin-bottom: 10px;">Empowering Youth</p>
             </div>
         </section>
 
         <!-- Programs Introduction -->
-        <section class="about-page-section">
+        <section class="about-page-section reveal">
             <div class="container" style="max-width: 900px; text-align: center;">
                 <p class="section-subtitle">What We Offer</p>
-                <h2 class="section-title">Transformative Programs for Nigerian Youth</h2>
+                <h2 class="section-title">Transformative Programs <span>for Nigerian Youth</span></h2>
                 <p class="about-description" style="margin-top: 20px;">
                     Our comprehensive programs are designed to equip young Nigerians with the skills, knowledge, and
                     networks needed to become leaders and change-makers in their communities. Each program is carefully
@@ -261,7 +335,7 @@
         </section>
 
         <!-- Programs Grid -->
-        <section style="background: #f8fafc;">
+        <section class="reveal" style="background: #f8fafc; padding-top: 0;">
             <div class="container">
                 <div class="programs-grid">
                     <!-- Leadership Development Program -->
@@ -279,7 +353,7 @@
                                 <li><i class="fas fa-check-circle"></i> Peer-to-peer learning</li>
                                 <li><i class="fas fa-check-circle"></i> Leadership certification</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+
                         </div>
                     </div>
 
@@ -299,7 +373,7 @@
                                 <li><i class="fas fa-check-circle"></i> Mentorship by industry experts</li>
                                 <li><i class="fas fa-check-circle"></i> Pitch competition opportunities</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+
                         </div>
                     </div>
 
@@ -318,7 +392,7 @@
                                 <li><i class="fas fa-check-circle"></i> Voter education campaigns</li>
                                 <li><i class="fas fa-check-circle"></i> Social impact initiatives</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+
                         </div>
                     </div>
 
@@ -337,7 +411,7 @@
                                 <li><i class="fas fa-check-circle"></i> Career counseling</li>
                                 <li><i class="fas fa-check-circle"></i> Industry networking events</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+
                         </div>
                     </div>
 
@@ -356,7 +430,7 @@
                                 <li><i class="fas fa-check-circle"></i> Data analysis training</li>
                                 <li><i class="fas fa-check-circle"></i> Tech certification programs</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+
                         </div>
                     </div>
 
@@ -375,44 +449,47 @@
                                 <li><i class="fas fa-check-circle"></i> Networking with female leaders</li>
                                 <li><i class="fas fa-check-circle"></i> Gender advocacy training</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Impact Statistics -->
-        <section class="impact-stats">
+        <!-- Impact Counters Section -->
+        <section id="impact-counters" class="impact-counters reveal">
             <div class="container">
-                <h2 class="section-title" style="color: white; margin-bottom: 10px;">Our Impact So Far</h2>
-                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Making a real difference in communities
-                    across Nigeria</p>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">2,500+</div>
-                        <div class="stat-label">Youth Trained</div>
+                <p class="section-subtitle" style="color: var(--text-white);">Our Achievements</p>
+                <h2 class="section-title" style="color: var(--text-white);">Our Impact <span>So Far</span></h2>
+                <div class="counters-grid">
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="10000">0</div>
+                        <p class="counter-label">Youth Reached</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">150+</div>
-                        <div class="stat-label">Startups Launched</div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="2500">0</div>
+                        <p class="counter-label">Trained Participants</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">85%</div>
-                        <div class="stat-label">Employment Rate</div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="150">0</div>
+                        <p class="counter-label">Community Projects</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">36</div>
-                        <div class="stat-label">States Reached</div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="30">0</div>
+                        <p class="counter-label">Partner Organizations</p>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" data-target="20">0</div>
+                        <p class="counter-label">States Reached</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Testimonial -->
-        <section class="testimonial-section">
+        <section class="testimonial-section reveal">
             <div class="container" style="max-width: 900px;">
-                <h2 class="section-title" style="text-align: center;">Success Stories</h2>
+                <h2 class="section-title" style="text-align: center;">Success <span>Stories</span></h2>
                 <div class="testimonial-card">
                     <p class="testimonial-text">
                         "The Leadership Development Program completely transformed my perspective. I went from being
@@ -431,11 +508,11 @@
         </section>
 
         <!-- CTA Section -->
-        <section id="register" class="register-section">
+        <section id="register" class="register-section reveal">
             <div class="container register-container">
                 <div class="register-text-col">
                     <p class="section-subtitle" style="text-align: left;">Join a Program</p>
-                    <h2 class="register-title">Ready to Transform Your Future?</h2>
+                    <h2 class="register-title">Ready to Transform <span>Your Future?</span></h2>
                     <p class="register-description">
                         Take the first step towards becoming a leader and change-maker. Our programs are open to all
                         young Nigerians committed to personal growth and national development.
@@ -496,7 +573,7 @@
         <div id="newsletter" class="newsletter">
             <div class="container newsletter-container">
                 <div class="newsletter-text">
-                    <h2>Stay Updated</h2>
+                    <h2>Stay <span>Updated</span></h2>
                     <p>Stay up to date on our Empowerment, events, research and more</p>
                 </div>
                 <form class="newsletter-form">
@@ -515,7 +592,7 @@
                 <ul>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="programs.html">Programs</a></li>
-                    <li><a href="blog.html">News & Update</a></li>
+                    <li><a href="news.html">News & Update</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </div>
