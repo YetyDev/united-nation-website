@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -66,6 +66,8 @@
                 <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
                 <li class="nav-item"><a href="roadmap.html" class="nav-link">Impact</a></li>
                 <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                <li class="nav-item mobile-only"><a href="login.html" class="nav-link login-btn">Sign Up</a></li>
+                <li class="nav-item mobile-only"><a href="contact.html" class="nav-contact-btn">Contact Us</a></li>
 
             </ul>
             <div class="nav-actions">
@@ -93,32 +95,107 @@
                         through skills development, civic engagement, innovation, and social impact programs across
                         Nigeria.</p>
                     <div class="hero-buttons">
-                        <a href="login.html" class="btn btn-primary">Learn More</a>
-                        <a href="#" class="btn btn-outline">Join the Movement</a>
+                        <a href="about.html" class="btn btn-primary">Learn More</a>
+                        <a href="get-involved.html#join-form" class="btn btn-outline">Join the Movement</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Snapshot Section (Who We Are Redesign) -->
-        <section id="about-snapshot" class="about-snapshot">
-            <div class="container">
-                <div class="about-snapshot-grid">
-                    <div class="about-snapshot-image">
+        <!-- About Section Content (Synced with About Page Design) -->
+        <section id="about-snapshot" class="about-page-section reveal" style="padding: 80px 0;">
+            <div class="container about-page-container">
+                <!-- Left Column: Visuals -->
+                <div class="about-visuals">
+                    <div class="main-image-container">
                         <img src="who-we-are.png" alt="United Youth Nigeria Movement members collaborating"
-                            class="img-responsive">
+                            class="about-main-img">
+                        <div class="floating-badge">
+                            <div class="badge-avatars">
+                                <img src="p1.jpg" alt="Member">
+                                <img src="p2.jpg" alt="Member">
+                                <img src="p3.jpg" alt="Member">
+                                <span class="avatar-plus">+</span>
+                            </div>
+                            <div class="badge-text">
+                                <strong>230+</strong>
+                                <span>Active Members</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="about-snapshot-text">
-                        <h3 class="about-top-title">About UYNM</h3>
-                        <h2 class="section-title title-left" style="margin-bottom: 20px;">Who We
-                            <span>Are</span>
-                        </h2>
-                        <p class="about-description">The United Youth Nigeria Movement (UYNM) is a national youth-driven
-                            initiative created to empower young Nigerians to lead, innovate, and actively contribute to
-                            the country's development. We are a community of passionate, visionary, and purpose-driven
-                            youths united by a shared belief in Nigeria's potential for greatness. UYNM brings together
-                            young people from diverse ethnic, religious, and social backgrounds, fostering unity,</p>
-                        <a href="about.html" class="btn btn-text">Read More About Us &rarr;</a>
+                </div>
+
+                <!-- Right Column: Text -->
+                <div class="about-text-content">
+                    <h3 class="about-top-title"
+                        style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 10px;">
+                        About UYNM</h3>
+                    <h2 class="section-title title-left" style="margin-bottom: 30px;">Who We <span>Are</span></h2>
+                    <p class="about-description"
+                        style="color: var(--text-light); line-height: 1.8; margin-bottom: 20px;">
+                        The United Youth Nigeria Movement (UYNM) is a transformative platform focused on empowering
+                        young Nigerians with the skills, knowledge, and opportunities needed to drive positive change.
+                        We are a community-led movement dedicated to fostering leadership, innovation, and sustainable
+                        development across the 36 states of the federation and the Federal Capital Territory (FCT).
+                    </p>
+                    <a href="about.html" class="btn btn-text"
+                        style="color: var(--primary-blue); font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">Read
+                        More About Us &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission, Vision & Core Values Section -->
+        <section id="mvv-section" class="mvv-section reveal">
+            <div class="container">
+                <h2 class="section-title">Our Mission, Vision <span>& Core Values</span></h2>
+                <div class="mv-cards">
+                    <!-- Mission Card -->
+                    <div class="mv-card">
+                        <div class="mv-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To identify, nurture, and empower young Nigerians who are committed to making a positive
+                            impact on their communities and the country at large. We will provide a platform for youth
+                            to engage, collaborate, and develop the skills and networks necessary to drive change.</p>
+                    </div>
+
+                    <!-- Vision Card -->
+                    <div class="mv-card">
+                        <div class="mv-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>A Nigeria where young people are empowered to lead, innovate, and drive sustainable
+                            development. A country where meritocracy, inclusivity, and justice are the hallmarks of
+                            governance and social progress for all citizens.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Values Banner -->
+            <div class="core-values-banner">
+                <div class="container cv-grid">
+                    <div class="cv-title">
+                        <h2>Our Core <br>Values</h2>
+                    </div>
+                    <div class="cv-list">
+                        <div class="cv-item">
+                            <strong>Inclusivity :</strong> Embracing Nigerian diversity and promoting unity
+                        </div>
+                        <div class="cv-item">
+                            <strong>Meritocracy :</strong> Leadership based on competence and integrity
+                        </div>
+                        <div class="cv-item">
+                            <strong>Innovation :</strong> Encouraging creativity and problem-solving
+                        </div>
+                        <div class="cv-item">
+                            <strong>Accountability :</strong> Promoting transparency and good governance
+                        </div>
+                        <div class="cv-item">
+                            <strong>Global citizenship :</strong> Preparing youths for global engagement
+                        </div>
                     </div>
                 </div>
             </div>
@@ -169,80 +246,87 @@
             <div class="container">
                 <p class="section-subtitle">Our Initiatives</p>
                 <h2 class="section-title">Our Key <span>Programs</span></h2>
-                <div class="program-carousel">
-                    <div class="program-highlight-card">
-                        <div class="ph-image">
-                            <img src="111.jpg" alt="Youth Empowerment Bootcamps">
+                <div class="carousel-wrapper">
+                    <button class="carousel-nav prev" aria-label="Previous slide"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <div class="program-carousel" id="program-carousel">
+                        <div class="program-highlight-card">
+                            <div class="ph-image">
+                                <img src="111.jpg" alt="Youth Empowerment Bootcamps">
+                            </div>
+                            <div class="ph-content">
+                                <h3>Youth Empowerment Bootcamps</h3>
+                                <p>Hands-on training programs that equip youth with employable and entrepreneurial
+                                    skills.
+                                </p>
+                                <div class="impact-label">
+                                    <span>Impact Progress</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="impact-progress">
+                                    <div class="impact-bar" style="width: 85%;"></div>
+                                </div>
+                                <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Participate
+                                    Now</a>
+                            </div>
                         </div>
-                        <div class="ph-content">
-                            <h3>Youth Empowerment Bootcamps</h3>
-                            <p>Hands-on training programs that equip youth with employable and entrepreneurial skills.
-                            </p>
-                            <div class="impact-label">
-                                <span>Impact Progress</span>
-                                <span>85%</span>
+                        <div class="program-highlight-card">
+                            <div class="ph-image">
+                                <img src="11.jpg" alt="Youth Empowerment Bootcamps">
                             </div>
-                            <div class="impact-progress">
-                                <div class="impact-bar" style="width: 85%;"></div>
+                            <div class="ph-content">
+                                <h3>Leadership Fellowship</h3>
+                                <p>Structured leadership and mentorship program for emerging youth leaders.</p>
+                                <div class="impact-label">
+                                    <span>Impact Progress</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="impact-progress">
+                                    <div class="impact-bar" style="width: 70%;"></div>
+                                </div>
+                                <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Apply Now</a>
                             </div>
-                            <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Participate
-                                Now</a>
+                        </div>
+                        <div class="program-highlight-card">
+                            <div class="ph-image">
+                                <img src="111.jpg" alt="Innovation Challenges">
+                            </div>
+                            <div class="ph-content">
+                                <h3>Innovation Challenges</h3>
+                                <p>Competitions that support creative solutions to social problems.</p>
+                                <div class="impact-label">
+                                    <span>Impact Progress</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="impact-progress">
+                                    <div class="impact-bar" style="width: 60%;"></div>
+                                </div>
+                                <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Join
+                                    Challenge</a>
+                            </div>
+                        </div>
+                        <div class="program-highlight-card">
+                            <div class="ph-image">
+                                <img src="11111.jpg" alt="Community Outreach Projects">
+                            </div>
+                            <div class="ph-content">
+                                <h3>Community Outreach Projects</h3>
+                                <p>Youth-led initiatives that create measurable social change.</p>
+                                <div class="impact-label">
+                                    <span>Impact Progress</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="impact-progress">
+                                    <div class="impact-bar" style="width: 90%;"></div>
+                                </div>
+                                <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Volunteer
+                                    Now</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="program-highlight-card">
-                        <div class="ph-image">
-                            <img src="11.jpg" alt="Youth Empowerment Bootcamps">
-                        </div>
-                        <div class="ph-content">
-                            <h3>Leadership Fellowship</h3>
-                            <p>Structured leadership and mentorship program for emerging youth leaders.</p>
-                            <div class="impact-label">
-                                <span>Impact Progress</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="impact-progress">
-                                <div class="impact-bar" style="width: 70%;"></div>
-                            </div>
-                            <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Apply Now</a>
-                        </div>
-                    </div>
-                    <div class="program-highlight-card">
-                        <div class="ph-image">
-                            <img src="111.jpg" alt="Innovation Challenges">
-                        </div>
-                        <div class="ph-content">
-                            <h3>Innovation Challenges</h3>
-                            <p>Competitions that support creative solutions to social problems.</p>
-                            <div class="impact-label">
-                                <span>Impact Progress</span>
-                                <span>60%</span>
-                            </div>
-                            <div class="impact-progress">
-                                <div class="impact-bar" style="width: 60%;"></div>
-                            </div>
-                            <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Join
-                                Challenge</a>
-                        </div>
-                    </div>
-                    <div class="program-highlight-card">
-                        <div class="ph-image">
-                            <img src="11111.jpg" alt="Community Outreach Projects">
-                        </div>
-                        <div class="ph-content">
-                            <h3>Community Outreach Projects</h3>
-                            <p>Youth-led initiatives that create measurable social change.</p>
-                            <div class="impact-label">
-                                <span>Impact Progress</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="impact-progress">
-                                <div class="impact-bar" style="width: 90%;"></div>
-                            </div>
-                            <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Volunteer Now</a>
-                        </div>
-                    </div>
+                    <button class="carousel-nav next" aria-label="Next slide"><i
+                            class="fas fa-chevron-right"></i></button>
                 </div>
-
             </div>
         </section>
 
@@ -365,85 +449,15 @@
             <div class="container">
                 <div class="cta-banner">
                     <h2 class="section-title" style="color: var(--text-white);">Start Your Empowerment <span>Journey
-                            Today</span>
-                    </h2>
+                            Today</span></h2>
                     <p>Join thousands of young Nigerians already building skills, leadership capacity, and opportunities
                         through UYNM programs.</p>
-                    <a href="login.html" class="btn btn-primary btn-large">Sign Up Free Now</a>
+                    <a href="get-involved.html#join-form" class="btn btn-primary btn-large">Join the Movement</a>
                     <p class="cta-note">Open to students, graduates, and young professionals</p>
                 </div>
             </div>
         </section>
 
-        <!-- Team Section -->
-        <section id="team" class="team-section">
-            <div class="container">
-                <p class="section-subtitle">The People Behind UYNM</p>
-                <h2 class="section-title">Meet Our <span>Leadership</span></h2>
-                <div class="team-grid">
-                    <div class="team-card">
-                        <div class="team-image">
-                            <img src="p4.jpg" alt="Leader 1">
-                            <div class="team-overlay">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-info">
-                            <h3>Adebayo Chen</h3>
-                            <p>National Coordinator</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image">
-                            <img src="p3.jpg" alt="Leader 2">
-                            <div class="team-overlay">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-info">
-                            <h3>Sarah Okoro</h3>
-                            <p>Program Director</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image">
-                            <img src="p2.jpg" alt="Leader 3">
-                            <div class="team-overlay">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-info">
-                            <h3>Emeka Jude</h3>
-                            <p>Civic Lead</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image">
-                            <img src="p1.jpg" alt="Leader 4">
-                            <div class="team-overlay">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-info">
-                            <h3>Fatima Yusuf</h3>
-                            <p>Innovation Head</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Partners Preview Section -->
         <section id="partners-preview" class="partners-preview">
@@ -593,7 +607,9 @@
         <div id="newsletter" class="newsletter">
             <div class="container newsletter-container">
                 <div class="newsletter-text">
-                    <h2>Stay <span>Updated</span></h2>
+                    <h2 class="section-title" style="color: var(--text-white); margin-bottom: 20px;">Stay
+                        <span>Updated</span>
+                    </h2>
                     <p>Stay up to date on our Empowerment, events, research and more</p>
                 </div>
                 <form class="newsletter-form">

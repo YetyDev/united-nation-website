@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -301,6 +301,8 @@
                 <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
                 <li class="nav-item"><a href="roadmap.html" class="nav-link">Impact</a></li>
                 <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                <li class="nav-item mobile-only"><a href="login.html" class="nav-link login-btn">Sign Up</a></li>
+                <li class="nav-item mobile-only"><a href="contact.html" class="nav-contact-btn">Contact Us</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="login.html" class="nav-link login-btn">Sign Up</a>
@@ -489,7 +491,7 @@
         <!-- Testimonial -->
         <section class="testimonial-section reveal">
             <div class="container" style="max-width: 900px;">
-                <h2 class="section-title" style="text-align: center;">Success <span>Stories</span></h2>
+                <h2 class="section-title">Success <span>Stories</span></h2>
                 <div class="testimonial-card">
                     <p class="testimonial-text">
                         "The Leadership Development Program completely transformed my perspective. I went from being
@@ -526,13 +528,19 @@
                     <div class="register-form-box">
                         <form action="#">
                             <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" class="form-control" placeholder="Full Name">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" class="form-control"
+                                    placeholder="Enter your full name">
                             </div>
 
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control" placeholder="Email Address">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="yourname@gmail.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="090 000 0000">
                             </div>
 
                             <div class="form-group">
@@ -549,8 +557,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Why do you want to join this program?</label>
-                                <textarea id="message" class="form-control" rows="4"
+                                <label for="location">Location (State/LGA)</label>
+                                <input type="text" id="location" class="form-control"
+                                    placeholder="E.g. Lagos Island, Lagos">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="motivation">Why do you want to join this program?</label>
+                                <textarea id="motivation" class="form-control" rows="4"
                                     placeholder="Tell us about your goals..."></textarea>
                             </div>
 
@@ -559,7 +573,7 @@
                                 <label for="terms">I agree to terms and conditions</label>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-register">Apply Now</button>
+                            <button type="submit" class="btn btn-primary btn-register">Join the Program Now</button>
                         </form>
                     </div>
                 </div>
@@ -573,7 +587,9 @@
         <div id="newsletter" class="newsletter">
             <div class="container newsletter-container">
                 <div class="newsletter-text">
-                    <h2>Stay <span>Updated</span></h2>
+                    <h2 class="section-title" style="color: var(--text-white); margin-bottom: 20px;">Stay
+                        <span>Updated</span>
+                    </h2>
                     <p>Stay up to date on our Empowerment, events, research and more</p>
                 </div>
                 <form class="newsletter-form">

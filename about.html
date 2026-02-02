@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -68,6 +68,8 @@
                 <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
                 <li class="nav-item"><a href="roadmap.html" class="nav-link">Impact</a></li>
                 <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                <li class="nav-item mobile-only"><a href="login.html" class="nav-link login-btn">Sign Up</a></li>
+                <li class="nav-item mobile-only"><a href="contact.html" class="nav-contact-btn">Contact Us</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="login.html" class="nav-link login-btn">Sign Up</a>
@@ -113,7 +115,7 @@
 
                 <!-- Right Column: Text -->
                 <div class="about-text-content">
-                    <h2 class="about-title" style="font-size: 2rem;">About <span>UYNM</span></h2>
+                    <h2 class="section-title title-left" style="margin-bottom: 30px;">About <span>UYNM</span></h2>
                     <p class="about-description">
                         The United Youth Nigeria Movement (UYNM) is a transformative platform focused on empowering
                         young Nigerians with the skills, knowledge, and opportunities needed to drive positive change.
@@ -133,20 +135,19 @@
                         future for our nation and empower the next generation.
                     </p>
 
-                    <a href="login.html" class="btn btn-primary" style="margin-top: 10px;">Become a Member</a>
+                    <a href="#register" class="btn btn-primary" style="margin-top: 10px;">Become a Member</a>
                 </div>
             </div>
         </section>
 
-        <!-- Mission & Vision Section -->
-        <section id="mission-vision" class="mission-vision-section reveal">
+        <!-- Mission, Vision & Core Values Section -->
+        <section id="mvv-section" class="mvv-section reveal">
             <div class="container">
-                <h2 class="section-title mv-section-title">Our Mission and <span>Vision</span></h2>
-
+                <h2 class="section-title">Our Mission, Vision <span>& Core Values</span></h2>
                 <div class="mv-cards">
                     <!-- Mission Card -->
                     <div class="mv-card">
-                        <div class="icon-box">
+                        <div class="mv-icon">
                             <i class="fas fa-bullseye"></i>
                         </div>
                         <h3>Our Mission</h3>
@@ -157,7 +158,7 @@
 
                     <!-- Vision Card -->
                     <div class="mv-card">
-                        <div class="icon-box">
+                        <div class="mv-icon">
                             <i class="fas fa-eye"></i>
                         </div>
                         <h3>Our Vision</h3>
@@ -167,36 +168,40 @@
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Core Values Section (Green) -->
-        <section class="core-values-green reveal">
-            <div class="container cv-green-grid">
-                <div class="cv-green-title">
-                    <h2 class="" style="color: #fff; text-align: left;">Our Core <br>Values
-                    </h2>
-                </div>
-                <div class="cv-green-list">
-                    <div class="cv-green-item"><strong>Inclusivity:</strong> Embracing all young people irrespective of
-                        background, tribe, or religion.</div>
-                    <div class="cv-green-item"><strong>Meritocracy:</strong> A system based on competence and integrity.
+            <!-- Core Values Banner -->
+            <div class="core-values-banner">
+                <div class="container cv-grid">
+                    <div class="cv-title">
+                        <h2>Our Core <br>Values</h2>
                     </div>
-                    <div class="cv-green-item"><strong>Innovation:</strong> Encouraging creative thinking and modern
-                        problem solving.</div>
-                    <div class="cv-green-item"><strong>Accountability:</strong> Promoting transparent and good
-                        governance.</div>
-                    <div class="cv-green-item"><strong>Global Citizenship:</strong> Preparing youth for global
-                        engagement.</div>
+                    <div class="cv-list">
+                        <div class="cv-item">
+                            <strong>Inclusivity :</strong> Embracing Nigerian diversity and promoting unity
+                        </div>
+                        <div class="cv-item">
+                            <strong>Meritocracy :</strong> Leadership based on competence and integrity
+                        </div>
+                        <div class="cv-item">
+                            <strong>Innovation :</strong> Encouraging creativity and problem-solving
+                        </div>
+                        <div class="cv-item">
+                            <strong>Accountability :</strong> Promoting transparency and good governance
+                        </div>
+                        <div class="cv-item">
+                            <strong>Global citizenship :</strong> Preparing youths for global engagement
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
 
         <!-- Recruitment/Criteria Section -->
         <section class="recruitment-section reveal">
             <div class="container recruitment-grid">
                 <div class="recruitment-content">
-                    <h2>Who we are looking for:</h2>
+                    <h2 class="section-title title-left" style="margin-bottom: 30px;">Who we are <span>looking
+                            for</span></h2>
                     <ul class="recruitment-list">
                         <li>Young professional, entrepreneurs, and students across Nigeria and the Diaspora.</li>
                         <li>Inclusive Nigerians irrespective of religion and ethnic background.</li>
@@ -205,7 +210,7 @@
                         </li>
                         <li>Change agents ready to contribute and share knowledge in any field of interest.</li>
                     </ul>
-                    <a href="login.html" class="btn btn-primary" style="margin-top: 30px;">Become a Member</a>
+                    <a href="#register" class="btn btn-primary" style="margin-top: 30px;">Become a Member</a>
                 </div>
                 <div class="recruitment-image">
                     <img src="hero_slide_3.png" alt="Joining the UYNM Team">
@@ -227,46 +232,40 @@
                     <div class="register-form-box">
                         <form action="#">
                             <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" class="form-control" placeholder="Full Name">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" class="form-control"
+                                    placeholder="Enter your full name">
                             </div>
-
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control" placeholder="Email Address">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="yourname@gmail.com">
                             </div>
-
-                            <div class="form-row">
-                                <div class="form-group half">
-                                    <label for="city">City</label>
-                                    <input type="text" id="city" class="form-control" placeholder="City">
-                                </div>
-                                <div class="form-group half">
-                                    <label for="state">State</label>
-                                    <input type="text" id="state" class="form-control" placeholder="State">
-                                </div>
-                            </div>
-
                             <div class="form-group">
-                                <label for="interest">Select Interest / Field</label>
-                                <select id="interest" class="form-control">
-                                    <option value="" disabled selected>Select an option</option>
-                                    <option value="tech">Technology</option>
-                                    <option value="leadership">Leadership</option>
-                                    <option value="entrepreneurship">Entrepreneurship</option>
-                                    <option value="education">Education</option>
-                                    <option value="other">Other</option>
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="090 000 0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="track">Involvement Track</label>
+                                <select id="track" class="form-control">
+                                    <option value="" disabled selected>Select a track</option>
+                                    <option value="volunteer">Volunteer</option>
+                                    <option value="partner">Partner / Organization</option>
+                                    <option value="member">Individual Member</option>
+                                    <option value="mentor">Mentor</option>
                                 </select>
                             </div>
-
                             <div class="form-group">
-                                <label for="describe">Briefly describe yourself</label>
-                                <textarea id="describe" class="form-control" rows="3"
-                                    placeholder="Tell us about yourself..."></textarea>
+                                <label for="location">Location (State/LGA)</label>
+                                <input type="text" id="location" class="form-control"
+                                    placeholder="E.g. Lagos Island, Lagos">
                             </div>
-
-                            <button type="submit" class="btn btn-primary btn-register"
-                                style="width: 100%;">JOIN</button>
+                            <div class="form-group">
+                                <label for="motivation">Why do you want to join UYNM?</label>
+                                <textarea id="motivation" class="form-control" rows="4"
+                                    placeholder="Tell us about your interests and goals..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-register" style="width: 100%;">JOIN THE
+                                MOVEMENT NOW</button>
                         </form>
                     </div>
                 </div>
@@ -280,7 +279,9 @@
         <div id="newsletter" class="newsletter">
             <div class="container newsletter-container">
                 <div class="newsletter-text">
-                    <h2>Stay <span>Updated</span></h2>
+                    <h2 class="section-title" style="color: var(--text-white); margin-bottom: 20px;">Stay
+                        <span>Updated</span>
+                    </h2>
                     <p>Stay up to date on our Empowerment, events, research and more</p>
                 </div>
                 <form class="newsletter-form">

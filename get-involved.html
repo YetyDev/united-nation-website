@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css?v=1">
@@ -131,6 +131,12 @@
             color: var(--text-gray);
             font-size: 0.95rem;
             line-height: 1.6;
+        }
+
+        .engagement-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         /* Impact Section */
@@ -291,33 +297,41 @@
 
                 <div class="engagement-grid">
                     <!-- Volunteer -->
-                    <div class="engagement-card">
-                        <div class="pillar-icon"><i class="fas fa-hands-helping"></i></div>
-                        <h3>Volunteer</h3>
-                        <p>Dedicate your time and skills to support our grassroots projects and community outreaches
-                            across the nation.</p>
-                    </div>
+                    <a href="#join-form" class="engagement-card-link">
+                        <div class="engagement-card">
+                            <div class="pillar-icon"><i class="fas fa-hands-helping"></i></div>
+                            <h3>Volunteer</h3>
+                            <p>Dedicate your time and skills to support our grassroots projects and community outreaches
+                                across the nation.</p>
+                        </div>
+                    </a>
                     <!-- Partner -->
-                    <div class="engagement-card">
-                        <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
-                        <h3>Partner</h3>
-                        <p>Collaborate with us as an organization or institution to scale our impact and create new
-                            opportunities for youth.</p>
-                    </div>
+                    <a href="#join-form" class="engagement-card-link">
+                        <div class="engagement-card">
+                            <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+                            <h3>Partner</h3>
+                            <p>Collaborate with us as an organization or institution to scale our impact and create new
+                                opportunities for youth.</p>
+                        </div>
+                    </a>
                     <!-- Member -->
-                    <div class="engagement-card">
-                        <div class="pillar-icon"><i class="fas fa-user-plus"></i></div>
-                        <h3>Become a Member</h3>
-                        <p>Join our growing family of young Nigerians committed to personal growth and national
-                            development.</p>
-                    </div>
+                    <a href="#join-form" class="engagement-card-link">
+                        <div class="engagement-card">
+                            <div class="pillar-icon"><i class="fas fa-user-plus"></i></div>
+                            <h3>Become a Member</h3>
+                            <p>Join our growing family of young Nigerians committed to personal growth and national
+                                development.</p>
+                        </div>
+                    </a>
                     <!-- Mentor -->
-                    <div class="engagement-card">
-                        <div class="pillar-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                        <h3>Mentor</h3>
-                        <p>Share your wisdom and experience to guide the next generation of Nigerian leaders and
-                            entrepreneurs.</p>
-                    </div>
+                    <a href="#join-form" class="engagement-card-link">
+                        <div class="engagement-card">
+                            <div class="pillar-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <h3>Mentor</h3>
+                            <p>Share your wisdom and experience to guide the next generation of Nigerian leaders and
+                                entrepreneurs.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -328,8 +342,8 @@
                 <div class="impact-content-box">
                     <div class="impact-text">
                         <p class="section-subtitle" style="text-align: left;">Why Your Involvement Matters</p>
-                        <h2 class="section-title" style="text-align: left;">Your Contribution <span>Drives Change</span>
-                        </h2>
+                        <h2 class="section-title title-left" style="margin-bottom: 30px;">Your Contribution <span>Drives
+                                Change</span></h2>
                         <p style="margin-bottom: 25px; color: var(--text-gray); line-height: 1.8;">The United Youth
                             Nigeria Movement is powered by the collective energy of individuals like you. By getting
                             involved, you're not just joining an organization; you're becoming part of a nationwide
@@ -417,7 +431,9 @@
         <div id="newsletter" class="newsletter">
             <div class="container newsletter-container">
                 <div class="newsletter-text">
-                    <h2>Stay <span>Updated</span></h2>
+                    <h2 class="section-title" style="color: var(--text-white); margin-bottom: 20px;">Stay
+                        <span>Updated</span>
+                    </h2>
                     <p>Stay up to date on our Empowerment, events, research and more</p>
                 </div>
                 <form class="newsletter-form">

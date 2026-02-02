@@ -171,5 +171,64 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Testimonial Slider logic removed for static grid display
+
+    // Scroll Reveal Animation (Restored)
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-up, .zoom-in');
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, revealOptions);
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
 });
 
+
+// Program Carousel Slider
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('program-carousel');
+    const prevBtn = document.querySelector('.carousel-nav.prev');
+    const nextBtn = document.querySelector('.carousel-nav.next');
+
+    if (carousel && prevBtn && nextBtn) {
+        const scrollAmount = 350; // Adjust based on card width + gap
+
+        nextBtn.addEventListener('click', () => {
+            carousel.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            carousel.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Optional: Hide/Show arrows based on scroll position
+        const toggleArrows = () => {
+            prevBtn.style.opacity = carousel.scrollLeft <= 0 ? '0.5' : '1';
+            prevBtn.style.pointerEvents = carousel.scrollLeft <= 0 ? 'none' : 'auto';
+            
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+            nextBtn.style.opacity = carousel.scrollLeft >= maxScroll - 5 ? '0.5' : '1';
+            nextBtn.style.pointerEvents = carousel.scrollLeft >= maxScroll - 5 ? 'none' : 'auto';
+        };
+
+        carousel.addEventListener('scroll', toggleArrows);
+        window.addEventListener('resize', toggleArrows);
+        toggleArrows(); // Initial state
+    }
+});
