@@ -8,230 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css?v=1">
-    <style>
-        /* Premium Hero Extensions */
-        .page-header {
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--text-white);
-            position: relative;
-            margin-top: -128px;
-            padding-top: 128px;
-            overflow: hidden;
-        }
 
-        .page-header-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            animation: kenburns 15s ease-out infinite alternate;
-            z-index: 0;
-        }
-
-        .page-header-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.7));
-            z-index: 1;
-        }
-
-        .page-header-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Engagement Pillars Grid */
-        .engagement-section {
-            padding: 100px 0;
-            background: #fff;
-        }
-
-        .engagement-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .engagement-card {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.4s ease;
-            border: 1px solid #f1f5f9;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .engagement-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--accent-gold);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-            transform-origin: left;
-        }
-
-        .engagement-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .engagement-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .pillar-icon {
-            width: 70px;
-            height: 70px;
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--accent-gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            margin: 0 auto 25px;
-            transition: all 0.4s ease;
-        }
-
-        .engagement-card:hover .pillar-icon {
-            background: var(--accent-gold);
-            color: #fff;
-            transform: rotateY(360deg);
-        }
-
-        .engagement-card h3 {
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        .engagement-card p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .engagement-card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        /* Impact Section */
-        .engagement-impact {
-            padding: 100px 0;
-            background-color: #f8fafc;
-        }
-
-        .impact-content-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .impact-image-container {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .impact-image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .impact-content-box:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Form Section */
-        .join-form-section {
-            padding: 100px 0;
-        }
-
-        .form-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #f8fafc;
-            padding: 50px;
-            border-radius: 24px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .full-width {
-            grid-column: span 2;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: var(--primary-blue);
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            background-color: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
-        }
-
-        @media (max-width: 768px) {
-
-            .impact-content-box,
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .full-width {
-                grid-column: span 1;
-            }
-
-            .form-wrapper {
-                padding: 30px 20px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -242,10 +23,13 @@
                     class="top-search-btn" aria-label="Search"><i class="fas fa-search"></i></button></div>
             <div class="top-social-icons">
                 <a href="#" aria-label="Yahoo"><i class="fab fa-yahoo"></i></a>
-                <a href="#" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:unitedyouthofnigerian@gmail.com" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+                <a href="https://web.facebook.com/profile.php?id=61587573413514" aria-label="Facebook"
+                    target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@unitedyouthofnigmovement?is_from_webapp=1&sender_device=pc"
+                    aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/unitedyouthofnigeriamovement/" aria-label="Instagram"
+                    target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>
@@ -258,9 +42,9 @@
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
-                <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
                 <li class="nav-item"><a href="roadmap.html" class="nav-link">Impact</a></li>
                 <li class="nav-item"><a href="get-involved.html" class="nav-link active">Get Involved</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="login.html" class="nav-link login-btn">Sign Up</a>
@@ -377,9 +161,10 @@
         <section class="join-form-section reveal" id="join-form">
             <div class="container">
                 <div class="form-wrapper">
-                    <div style="text-align: center; margin-bottom: 40px;">
+                    <div style="text-align: center; margin-bottom: 30px;">
                         <h2 class="section-title">Join the <span>United Movement</span></h2>
-                        <p style="color: var(--text-gray);">Fill out the form below to start your journey with us.</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">Fill out the form below to start your
+                            journey with us.</p>
                     </div>
                     <form action="#">
                         <div class="form-grid">
@@ -413,12 +198,11 @@
                             </div>
                             <div class="form-group full-width">
                                 <label for="motivation">Why do you want to join UYNM?</label>
-                                <textarea id="motivation" class="form-control" rows="4"
+                                <textarea id="motivation" class="form-control" rows="3"
                                     placeholder="Tell us about your interests and goals..."></textarea>
                             </div>
                             <div class="form-group full-width">
-                                <button type="submit" class="btn btn-primary"
-                                    style="width: 100%; padding: 18px; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">Join
+                                <button type="submit" class="btn btn-primary btn-submit-large">Join
                                     the Movement Now</button>
                             </div>
                         </div>
@@ -463,20 +247,15 @@
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-yahoo"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61587573413514" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@unitedyouthofnigmovement?is_from_webapp=1&sender_device=pc"
+                        target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/unitedyouthofnigeriamovement/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Gallery</h4>
-                <div class="footer-gallery">
-                    <img src="https://via.placeholder.com/80x80" alt="Gallery 1">
-                    <img src="https://via.placeholder.com/80x80" alt="Gallery 2">
-                    <img src="https://via.placeholder.com/80x80" alt="Gallery 3">
-                    <img src="https://via.placeholder.com/80x80" alt="Gallery 4">
-                </div>
-            </div>
+
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 United Youth Nigeria Movement. All rights reserved.</p>

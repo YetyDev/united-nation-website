@@ -8,173 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css?v=1">
-    <style>
-        /* Premium Hero Extensions */
-        .page-header {
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--text-white);
-            position: relative;
-            margin-top: -128px;
-            padding-top: 128px;
-            overflow: hidden;
-        }
 
-        .page-header-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            animation: kenburns 15s ease-out infinite alternate;
-            z-index: 0;
-        }
-
-        .page-header-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.7));
-            z-index: 1;
-        }
-
-        .page-header-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Roadmap Timeline Styles */
-        .roadmap-section {
-            padding: 100px 0;
-            background-color: var(--bg-white);
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 50px auto 0;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background: var(--accent-gold);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1px;
-        }
-
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background-color: var(--bg-white);
-            border: 4px solid var(--accent-gold);
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .left {
-            left: 0;
-        }
-
-        .right {
-            left: 50%;
-        }
-
-        .left::after {
-            left: auto;
-            right: -10px;
-        }
-
-        .right::after {
-            left: -10px;
-        }
-
-        .timeline-content {
-            padding: 25px;
-            background-color: white;
-            position: relative;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .timeline-content:hover {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .timeline-date {
-            font-weight: 700;
-            color: var(--accent-gold);
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .timeline-content h3 {
-            color: var(--primary-blue);
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .timeline-content p {
-            font-size: 0.95rem;
-            color: var(--text-gray);
-            line-height: 1.6;
-        }
-
-        /* Impact Section Specifics */
-        .impact-page-stats {
-            background-color: #f8fafc;
-            padding: 100px 0;
-        }
-
-        /* Responsive Timeline */
-        @media screen and (max-width: 768px) {
-            .timeline::after {
-                left: 31px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-
-            .timeline-item::after {
-                left: 21px;
-                right: auto;
-            }
-
-            .right {
-                left: 0%;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -185,10 +23,13 @@
                     class="top-search-btn" aria-label="Search"><i class="fas fa-search"></i></button></div>
             <div class="top-social-icons">
                 <a href="#" aria-label="Yahoo"><i class="fab fa-yahoo"></i></a>
-                <a href="#" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:unitedyouthofnigerian@gmail.com" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+                <a href="https://web.facebook.com/profile.php?id=61587573413514" aria-label="Facebook"
+                    target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@unitedyouthofnigmovement?is_from_webapp=1&sender_device=pc"
+                    aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/unitedyouthofnigeriamovement/" aria-label="Instagram"
+                    target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>
@@ -201,9 +42,9 @@
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
-                <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
                 <li class="nav-item"><a href="roadmap.html" class="nav-link active">Impact</a></li>
                 <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="login.html" class="nav-link login-btn">Sign Up</a>
@@ -320,15 +161,117 @@
         </section>
 
         <!-- Partnerships / Call to Action -->
-        <section class="reveal" style="padding: 80px 0; text-align: center;">
+        <section class="reveal"
+            style="padding: 120px 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 400px;">
             <div class="container">
                 <h2 class="section-title">Support Our <span>Mission</span></h2>
                 <p style="margin-bottom: 40px; color: var(--text-gray); font-size: 1.1rem;">Together, we can accelerate
                     the growth and impact of Nigerian youth. Become a partner or supporter today.</p>
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="get-involved.html" class="btn btn-primary">Partner With Us</a>
-                    <a href="contact.html" class="btn btn-outline"
-                        style="border-color: var(--primary-blue); color: var(--primary-blue);">Get in Touch</a>
+                    <a href="get-involved.html" class="btn btn-primary btn-large">Partner With Us</a>
+                    <a href="get-involved.html#donate" class="btn btn-outline btn-outline-blue btn-large">Donate</a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Donation Section -->
+        <!-- Donation Section -->
+        <section id="donate" class="reveal donation-section">
+            <div class="container">
+                <div class="donation-box">
+
+                    <!-- Left Image Section -->
+                    <div class="donation-image-col">
+                        <img src="hero_slide_1.png" alt="Youth Empowerment">
+                        <div class="donation-overlay">
+                        </div>
+                        <div class="donation-text-overlay">
+                            <h3>Empower a Youth Today</h3>
+                            <p>Your contribution helps us build a stronger, more united Nigeria through youth
+                                development.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Form Section -->
+                    <div class="donation-form-col">
+                        <div style="max-width: 500px; margin: 0 auto;">
+                            <!-- Header -->
+                            <div class="donation-header">
+                                <h2>Make a Donation</h2>
+                                <p>Every donation, no matter how big or small, fuels our mission to empower Nigerian
+                                    youth with skills, mentorship, and opportunities.</p>
+                            </div>
+
+                            <!-- Form -->
+                            <form>
+                                <div class="donation-input-row">
+                                    <div class="donation-input-wrapper">
+                                        <input type="text" placeholder="Your name" class="donation-input">
+                                    </div>
+                                    <div class="donation-input-wrapper">
+                                        <input type="email" placeholder="Your email" class="donation-input">
+                                    </div>
+                                </div>
+
+                                <div style="margin-bottom: 25px;">
+                                    <label class="donation-label">Donation amount</label>
+                                    <div class="donation-amount-wrapper">
+                                        <div class="donation-radio-group">
+                                            <label class="donation-radio-label">
+                                                <input type="radio" name="amount" value="5000"
+                                                    class="donation-radio-input"> &#8358;5,000
+                                            </label>
+                                            <label class="donation-radio-label">
+                                                <input type="radio" name="amount" value="10000"
+                                                    class="donation-radio-input"> &#8358;10,000
+                                            </label>
+                                            <label class="donation-radio-label">
+                                                <input type="radio" name="amount" value="25000"
+                                                    class="donation-radio-input"> &#8358;25,000
+                                            </label>
+                                            <label class="donation-radio-label">
+                                                <input type="radio" name="amount" value="50000"
+                                                    class="donation-radio-input"> &#8358;50,000
+                                            </label>
+                                        </div>
+                                        <div style="flex: 1; min-width: 120px;">
+                                            <input type="number" placeholder="Other Amount"
+                                                class="donation-other-amount">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="margin-bottom: 25px;">
+                                    <input type="text" placeholder="Company name (if applicable)"
+                                        class="donation-input">
+                                </div>
+
+                                <div class="donation-checkbox-wrapper">
+                                    <input type="checkbox" id="updates" class="donation-checkbox">
+                                    <label for="updates" class="donation-checkbox-label">I would like to receive impact
+                                        updates via email</label>
+                                </div>
+
+                                <button type="submit" class="btn-donate-submit">Proceed to Payment</button>
+                            </form>
+
+                            <p class="donation-note">
+                                Your donation is tax-deductible. We are committed to transparency and accountability in
+                                all our financial dealings.
+                            </p>
+
+                            <!-- Security Notice -->
+                            <div class="donation-security">
+                                <p>
+                                    <i class="fas fa-shield-alt" style="margin-right: 5px;"></i>
+                                    <strong>Secure Payment:</strong> All transfers go directly to the UYNM corporate
+                                    account. We never request personal bank transfers.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -369,20 +312,15 @@
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-yahoo"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61587573413514" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@unitedyouthofnigmovement?is_from_webapp=1&sender_device=pc"
+                        target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/unitedyouthofnigeriamovement/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Gallery</h4>
-                <div class="footer-gallery">
-                    <img src="https://via.placeholder.com/80x80" alt="Gallery 1">
-                    <img src="https://via.placeholder.com/80x80" alt="Gallery 2">
-                    <img src="https://via.placeholder.com/80x80" alt="Gallery 3">
-                    <img src="https://via.placeholder.com/80x80" alt="Gallery 4">
-                </div>
-            </div>
+
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 United Youth Nigeria Movement. All rights reserved.</p>

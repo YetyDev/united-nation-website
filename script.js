@@ -170,8 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Testimonial Slider logic removed for static grid display
-
     // Scroll Reveal Animation (Restored)
     const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-up, .zoom-in');
     const revealOptions = {
@@ -195,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Program Carousel Slider
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.getElementById('program-carousel');
     const prevBtn = document.querySelector('.carousel-nav.prev');
     const nextBtn = document.querySelector('.carousel-nav.next');
@@ -221,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const toggleArrows = () => {
             prevBtn.style.opacity = carousel.scrollLeft <= 0 ? '0.5' : '1';
             prevBtn.style.pointerEvents = carousel.scrollLeft <= 0 ? 'none' : 'auto';
-            
+
             const maxScroll = carousel.scrollWidth - carousel.clientWidth;
             nextBtn.style.opacity = carousel.scrollLeft >= maxScroll - 5 ? '0.5' : '1';
             nextBtn.style.pointerEvents = carousel.scrollLeft >= maxScroll - 5 ? 'none' : 'auto';
