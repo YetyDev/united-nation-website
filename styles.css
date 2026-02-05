@@ -2871,28 +2871,16 @@ section {
     }
 }
 
-@media (max-width: 768px) {
+/* Responsive Styles for Tablets & Mobile */
+@media (max-width: 1024px) {
+
+    /* Tablet & Mobile Navigation */
     body {
         padding-top: 70px;
-        /* Navbar height only */
-    }
-
-    .container {
-        padding: 0 15px;
     }
 
     .top-info-bar {
         display: none;
-    }
-
-    .top-info-container {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .top-search-bar {
-        max-width: 100%;
     }
 
     .navbar {
@@ -2912,7 +2900,6 @@ section {
         z-index: 1001;
     }
 
-    /* Hamburger to X Animation */
     .menu-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -2967,7 +2954,6 @@ section {
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* Show mobile-only items in mobile menu */
     .nav-item.mobile-only {
         display: flex;
         flex-direction: column;
@@ -2976,12 +2962,10 @@ section {
         margin-top: 10px;
     }
 
-    /* Hide desktop nav-actions on mobile */
     .nav-actions {
         display: none;
     }
 
-    /* Style mobile menu buttons */
     .nav-menu .mobile-only .login-btn {
         color: var(--text-white);
         font-size: 0.95rem;
@@ -3011,6 +2995,28 @@ section {
         display: inline-block;
         margin-top: 15px;
         width: 100%;
+    }
+
+    /* Tablet Grids (2 Columns) */
+    .about-snapshot-grid,
+    .focus-grid,
+    .vision-grid,
+    .news-grid-new,
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding-top: 70px;
+        margin-top: -70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
     }
 
     /* Hero Section Mobile */
