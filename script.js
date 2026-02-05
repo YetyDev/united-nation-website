@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileMenuBtn.classList.toggle('active');
+            navbar.classList.toggle('mobile-open');
         });
     }
 
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
             mobileMenuBtn.classList.remove('active');
+            navbar.classList.remove('mobile-open');
         });
     });
 
