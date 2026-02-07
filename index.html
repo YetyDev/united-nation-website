@@ -66,9 +66,16 @@
                 <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
-                <li class="nav-item"><a href="roadmap.html" class="nav-link">Impact</a></li>
-                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
-                <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="roadmap.html" class="dropdown-item">Impact</a></li>
+                        <li><a href="get-involved.html" class="dropdown-item">Get Involved</a></li>
+                        <li><a href="news.html" class="dropdown-item">News & Update</a></li>
+                        <li><a href="faq.html" class="dropdown-item">FAQ</a></li>
+                        <li><a href="events.html" class="dropdown-item">Events</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item mobile-only"><a href="login.html" class="nav-link login-btn">Sign Up</a></li>
                 <li class="nav-item mobile-only"><a href="contact.html" class="nav-contact-btn">Contact Us</a></li>
 
@@ -86,9 +93,8 @@
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="hero-slider">
-                <div class="hero-slide active" style="background-image: url('hero_slide_1.png');"></div>
-                <div class="hero-slide" style="background-image: url('hero_slide_2.png');"></div>
-                <div class="hero-slide" style="background-image: url('hero_slide_3.png');"></div>
+                <div class="hero-slide active" style="background-image: url('hero-bg.png');"></div>
+                <div class="hero-slide" style="background-image:url(hero_slide_3.png);"></div>
             </div>
             <div class="hero-overlay"></div>
             <div class="container hero-content">
@@ -100,7 +106,7 @@
                         through skills development, civic engagement, innovation and social impact programs across
                         Nigeria.</p>
                     <div class="hero-buttons">
-                        <a href="about.html" class="btn btn-primary">Learn More</a>
+                        <a href="#about-snapshot" class="btn btn-primary">Learn More</a>
                         <a href="get-involved.html#join-form" class="btn btn-secondary-hero">Join the Movement</a>
                     </div>
                 </div>
@@ -143,14 +149,13 @@
                         We are a community-led movement dedicated to fostering leadership, innovation, and sustainable
                         development across the 36 states of the federation and the Federal Capital Territory (FCT).
                     </p>
-                    <a href="about.html" class="read-more">Read
-                        More About Us &rarr;</a>
+                    <a href="#video-section" class="read-more">See us in action &rarr;</a>
                 </div>
             </div>
         </section>
 
         <!-- Full Width Video Section -->
-        <section class="video-section reveal">
+        <section class="video-section reveal" id="video-section">
             <div class="container">
                 <div class="section-header-center">
                     <p class="section-subtitle">See Us In Action</p>
@@ -160,6 +165,18 @@
                     <div class="video-wrapper">
                         <video poster="who-we-are.png" controls>
                             <source src="uynm.mp4" type="video/mp4" width="500px" height="500px">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-wrapper">
+                        <video poster="hero_slide_1.png" controls>
+                            <source src="v1.mp4" type="video/mp4" width="500px" height="500px">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-wrapper">
+                        <video poster="membership-bg.png" controls>
+                            <source src="v2.mp4" type="video/mp4" width="500px" height="500px">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -298,54 +315,74 @@
                             </div>
                             <div class="ph-content">
                                 <h3>Leadership Fellowship</h3>
-                                <p>Structured leadership and mentorship program for emerging youth leaders.</p>
+                                <p>Structuring mentorships for young leaders.</p>
                                 <div class="impact-label">
                                     <span>Impact Progress</span>
-                                    <span>70%</span>
+                                    <span>85%</span>
                                 </div>
                                 <div class="impact-progress">
-                                    <div class="impact-bar" style="width: 70%;"></div>
+                                    <div class="impact-bar" style="width: 85%;"></div>
                                 </div>
-                                <a href="#" class="btn btn-primary btn-block btn-mt-15">Apply Now</a>
+                                <a href="#" class="btn btn-primary btn-block btn-mt-15">Participate
+                                    Now</a>
                             </div>
                         </div>
                         <div class="program-highlight-card">
                             <div class="ph-image">
-                                <img src="111.jpg" alt="Innovation Challenges">
+                                <img src="11111.jpg" alt="Youth Empowerment Bootcamps">
                             </div>
                             <div class="ph-content">
-                                <h3>Innovation Challenges</h3>
-                                <p>Competitions that support creative solutions to social problems.</p>
+                                <h3>Civic Engagement</h3>
+                                <p>Encouraging youth participation in governance.</p>
                                 <div class="impact-label">
                                     <span>Impact Progress</span>
-                                    <span>60%</span>
+                                    <span>85%</span>
                                 </div>
                                 <div class="impact-progress">
-                                    <div class="impact-bar" style="width: 60%;"></div>
+                                    <div class="impact-bar" style="width: 85%;"></div>
                                 </div>
-                                <a href="#" class="btn btn-primary btn-block btn-mt-15">Join
-                                    Challenge</a>
+                                <a href="#" class="btn btn-primary btn-block btn-mt-15">Participate
+                                    Now</a>
                             </div>
                         </div>
                         <div class="program-highlight-card">
                             <div class="ph-image">
-                                <img src="11111.jpg" alt="Community Outreach Projects">
+                                <img src="1111.jpg" alt="Youth Empowerment Bootcamps">
                             </div>
                             <div class="ph-content">
-                                <h3>Community Outreach Projects</h3>
-                                <p>Youth-led initiatives that create measurable social change.</p>
+                                <h3>Digital Skills Training</h3>
+                                <p>Preparing youth for the future of work.</p>
                                 <div class="impact-label">
                                     <span>Impact Progress</span>
-                                    <span>90%</span>
+                                    <span>85%</span>
                                 </div>
                                 <div class="impact-progress">
-                                    <div class="impact-bar" style="width: 90%;"></div>
+                                    <div class="impact-bar" style="width: 85%;"></div>
                                 </div>
-                                <a href="#" class="btn btn-primary btn-block btn-mt-15">Volunteer
+                                <a href="#" class="btn btn-primary btn-block btn-mt-15">Participate
+                                    Now</a>
+                            </div>
+                        </div>
+                        <div class="program-highlight-card">
+                            <div class="ph-image">
+                                <img src="111111.jpg" alt="Youth Empowerment Bootcamps">
+                            </div>
+                            <div class="ph-content">
+                                <h3>Community Development</h3>
+                                <p>Support for grassroots initiatives.</p>
+                                <div class="impact-label">
+                                    <span>Impact Progress</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="impact-progress">
+                                    <div class="impact-bar" style="width: 85%;"></div>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-block btn-mt-15">Participate
                                     Now</a>
                             </div>
                         </div>
                     </div>
+                    <div class="carousel-indicators" id="program-indicators"></div>
                     <button class="carousel-nav next" aria-label="Next slide"><i
                             class="fas fa-chevron-right"></i></button>
                 </div>
@@ -407,22 +444,25 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials">
+        <section id="testimonials" class="testimonials reveal">
             <div class="container">
-                <h2 class="section-title">What <span>People Say</span></h2>
-                <div class="testimonials-title-line"></div>
-                <p class="section-description">Help today because tomorrow you may be the one who needs more helping!
-                </p>
+                <div class="section-header-center zoom-in">
+                    <h2 class="section-title">What <span>People Say</span></h2>
+                    <div class="testimonials-title-line"></div>
+                    <p class="section-description">Help today because tomorrow you may be the one who needs more
+                        helping!
+                    </p>
+                </div>
 
                 <div class="testimonials-grid">
                     <!-- Card 1 -->
-                    <div class="testimonial-card">
+                    <div class="testimonial-card reveal-up delay-1">
                         <p class="testimonial-text">"UYNM has given me the creative freedom to design campaigns that
                             actually matter. Seeing our movement empower youth across all 36 states is a testament
                             to what we can achieve when we unite."</p>
                         <div class="testimonial-author">
                             <div class="author-image">
-                                <img src="testimony_angelina_1769947069386.png" alt="Angelina Rose">
+                                <img src="p1.jpg" alt="Angelina Rose">
                             </div>
                             <div class="author-info">
                                 <h4>Angelina Rose</h4>
@@ -432,29 +472,31 @@
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"The tech bootcamps at UYNM are world-class. I've not only
-                            sharpened my coding skills but also found a community of innovators who are passionate
-                            about building a better Nigeria."</p>
+                    <div class="testimonial-card active reveal-up delay-2">
+                        <p class="testimonial-text">"The Leadership Development Program completely transformed my
+                            perspective. I went from being uncertain about
+                            my future to confidently leading a team of 20 people in a tech startup. The mentorship and
+                            practical skills I gained
+                            were invaluable."</p>
                         <div class="testimonial-author">
                             <div class="author-image">
-                                <img src="testimony_taylor_1769946810400.png" alt="Taylor Swift">
+                                <img src="p3.jpg" alt="Chioma Adeyemi">
                             </div>
                             <div class="author-info">
-                                <h4>Taylor Swift</h4>
-                                <p>Developer</p>
+                                <h4>Chioma Adeyemi</h4>
+                                <p>Program Alumni, Tech Entrepreneur</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="testimonial-card">
+                    <div class="testimonial-card reveal-up delay-3">
                         <p class="testimonial-text">"Joining the United Youth Nigeria Movement was the best decision
                             of my career. The mentorship and leadership opportunities here have prepared me to drive
                             real technological change in our society."</p>
                         <div class="testimonial-author">
                             <div class="author-image">
-                                <img src="testimony_michel_1769946839158.png" alt="Michel Brown">
+                                <img src="p2.jpg" alt="Michel Brown">
                             </div>
                             <div class="author-info">
                                 <h4>Michel Brown</h4>
@@ -643,6 +685,9 @@
         </div>
         <div class="container footer-container">
             <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <img src="Ellipse 3.png" alt="United Youth Nigeria Movement Logo">
+                </a>
                 <p>United Youth Nigeria Movement (UYNM) is a transformative platform focused on empowering young
                     Nigerians with the skills, knowledge, and opportunities needed to drive positive change.</p>
             </div>

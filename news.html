@@ -66,9 +66,16 @@
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
-                <li class="nav-item"><a href="roadmap.html" class="nav-link">Impact</a></li>
-                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
-                <li class="nav-item"><a href="news.html" class="nav-link active">News & Update</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active">Pages <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="roadmap.html" class="dropdown-item">Impact</a></li>
+                        <li><a href="get-involved.html" class="dropdown-item">Get Involved</a></li>
+                        <li><a href="news.html" class="dropdown-item active">News & Update</a></li>
+                        <li><a href="faq.html" class="dropdown-item">FAQ</a></li>
+                        <li><a href="events.html" class="dropdown-item">Events</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item mobile-only"><a href="login.html" class="nav-link login-btn">Sign Up</a></li>
                 <li class="nav-item mobile-only"><a href="contact.html" class="nav-contact-btn">Contact Us</a></li>
             </ul>
@@ -94,37 +101,90 @@
             </div>
         </section>
 
-        <!-- Featured Articles Section -->
-        <section class="featured-articles reveal">
+        <!-- Read By Category Section -->
+        <section class="read-by-category reveal-up">
             <div class="container">
-                <div class="featured-grid">
-                    <!-- Featured Article 1 -->
-                    <div class="featured-article">
-                        <div class="featured-article-image">
-                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop"
-                                alt="Youth Leadership Development Workshop">
+                <div class="category-header">
+                    <h2 class="section-subtitle subtitle-left"
+                        style="color: #6B7280; font-size: 0.9rem; letter-spacing: 1.5px; margin-bottom: 20px;">READ BY
+                        CATEGORY</h2>
+                    <div style="width: 100%; height: 1px; background-color: #E5E7EB; margin-bottom: 40px;"></div>
+                </div>
+
+                <div class="category-grid">
+                    <!-- Category 1 -->
+                    <a href="#" class="category-card">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80"
+                                alt="Youth Empowerment">
                         </div>
-                        <div class="featured-article-content">
-                            <h2>Youth Leadership Development Workshop</h2>
-                            <p>UYNM recently hosted a leadership development workshop focused on equipping young people
-                                with essential skills and connected with mentors and peers they acquired.</p>
-                            <a href="#" class="btn btn-primary">Get Galleria</a>
+                        <span class="category-label">Youth Empowerment</span>
+                    </a>
+
+                    <!-- Category 2 -->
+                    <a href="#" class="category-card">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&q=80"
+                                alt="Community Impact">
                         </div>
+                        <span class="category-label">Community Impact</span>
+                    </a>
+
+                    <!-- Category 3 -->
+                    <a href="#" class="category-card">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80"
+                                alt="Skill Acquisition">
+                        </div>
+                        <span class="category-label">Skill Acquisition</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        </section>
+
+        <!-- Featured Blogs Section -->
+        <section class="featured-blogs reveal-up">
+            <div class="container">
+                <div class="category-header">
+                    <h2 class="section-subtitle subtitle-left"
+                        style="color: #6B7280; font-size: 0.9rem; letter-spacing: 1.5px; margin-bottom: 20px;">FEATURED
+                        BLOGS</h2>
+                    <div style="width: 100%; height: 1px; background-color: #E5E7EB; margin-bottom: 40px;"></div>
+                </div>
+
+                <div class="featured-blogs-grid">
+                    <!-- Blog 1 -->
+                    <div class="blog-card-minimal">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Youth Empowerment</span>
+                            <div class="meta-separator"></div>
+                            <span class="blog-date">Nov 14, 2025</span>
+                        </div>
+                        <h3 class="blog-title-minimal">25 Best Ways to Engage Youth in Community Development in 2025
+                        </h3>
                     </div>
 
-                    <!-- Featured Article 2 -->
-                    <div class="featured-article reverse">
-                        <div class="featured-article-content">
-                            <h2>Community Engagement & Outreach Programs</h2>
-                            <p>Our members continue to engage in community-driven initiatives aimed at education,
-                                empowerment, and social development. These programs are grassroot impact and inclusive
-                                growth.</p>
-                            <a href="#" class="btn btn-primary">Get Galleria</a>
+                    <!-- Blog 2 -->
+                    <div class="blog-card-minimal">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Community Impact</span>
+                            <div class="meta-separator"></div>
+                            <span class="blog-date">Dec 10, 2025</span>
                         </div>
-                        <div class="featured-article-image">
-                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=500&fit=crop"
-                                alt="Community Engagement & Outreach Programs">
+                        <h3 class="blog-title-minimal">Top 15 Strategies for Sustainable Grassroots Change</h3>
+                    </div>
+
+                    <!-- Blog 3 -->
+                    <div class="blog-card-minimal">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Skill Acquisition</span>
+                            <div class="meta-separator"></div>
+                            <span class="blog-date">Dec 16, 2025</span>
                         </div>
+                        <h3 class="blog-title-minimal">Will AI Really Change Product Management & Put Product Managers
+                            Out of Work?</h3>
                     </div>
                 </div>
             </div>
@@ -134,67 +194,83 @@
         <section class="updates-section reveal">
             <div class="container">
                 <div class="updates-header">
-                    <h2 class="section-title title-left" style="margin-bottom: 30px;">Latest <span>Updates</span></h2>
-                    <div class="search-box">
+                    <h2 class="title-left"">Recent <span>Post</span></h2>
+                    <div class=" search-box">
                         <input type="text" placeholder="Search" class="search-input">
                         <button class="search-btn">
                             <i class="fas fa-search"></i>
                         </button>
+                </div>
+            </div>
+
+            <div class="updates-grid">
+                <!-- Modern Blog Card 1 -->
+                <div class="modern-blog-card">
+                    <div class="modern-card-image">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop"
+                            alt="UYNM Official Launch">
+                        <div class="modern-card-overlay">
+                            <span class="modern-card-category-pill">Latest News</span>
+                        </div>
+                    </div>
+                    <div class="modern-card-content">
+                        <div class="modern-card-meta">
+                            <span class="meta-category">News</span>
+                            <span class="meta-line"></span>
+                            <span class="meta-date">Dec 12, 2024</span>
+                        </div>
+                        <h3 class="modern-card-title">UYNM Officially Launches Nationwide Youth Movement</h3>
+                        <p class="modern-card-excerpt">The United Youth Nigeria Movement officially kicked off with a
+                            historic rally attended by young people from across the nation.</p>
                     </div>
                 </div>
 
-                <div class="updates-grid">
-                    <!-- Update Card 1 -->
-                    <div class="update-card">
-                        <div class="update-image">
-                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop"
-                                alt="UYNM Official Launch">
-                        </div>
-                        <div class="update-content">
-                            <span class="update-date">12 December, 2024</span>
-                            <h3>"UYNM Officially Launches Nationwide Youth Movement"</h3>
-                            <p>The United Youth Nigeria Movement officially kicked off with a historic rally attended by
-                                young people from across the nation. The launch event also introduced the organization's
-                                mission, vision, and core values.</p>
-                            <a href="#" class="read-more">Read More →</a>
+                <!-- Modern Blog Card 2 -->
+                <div class="modern-blog-card">
+                    <div class="modern-card-image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
+                            alt="Call for Applications">
+                        <div class="modern-card-overlay">
+                            <span class="modern-card-category-pill">Opportunity</span>
                         </div>
                     </div>
-
-                    <!-- Update Card 2 -->
-                    <div class="update-card">
-                        <div class="update-image">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
-                                alt="Call for Applications">
+                    <div class="modern-card-content">
+                        <div class="modern-card-meta">
+                            <span class="meta-category">Join Us</span>
+                            <span class="meta-line"></span>
+                            <span class="meta-date">Jan 01, 2025</span>
                         </div>
-                        <div class="update-content">
-                            <span class="update-date">01 January, 2025</span>
-                            <h3>"Call for Applications: Join the United Youth Nigeria Movement"</h3>
-                            <p>UYNM is recruiting exceptional young Nigerians to join its cadre of leaders and
-                                changemakers, the application process is expected to be highly competitive and
-                                transparent.</p>
-                            <a href="#" class="read-more">Read More →</a>
-                        </div>
+                        <h3 class="modern-card-title">Call for Applications: Join the United Youth Nigeria Movement</h3>
+                        <p class="modern-card-excerpt">UYNM is recruiting exceptional young Nigerians to join its cadre
+                            of leaders and changemakers.</p>
                     </div>
+                </div>
 
-                    <!-- Update Card 3 -->
-                    <div class="update-card">
-                        <div class="update-image">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
-                                alt="Employment Program Markets">
+                <!-- CTA Card -->
+                <div class="modern-blog-card cta-card">
+                    <div class="cta-card-content">
+                        <div class="cta-header">
+                            <span class="cta-pill">Join Movement</span>
+                            <span class="cta-pill-outline">Make Impact</span>
                         </div>
-                        <div class="update-content">
-                            <span class="update-date">01 January, 2025</span>
-                            <h3>"Top 5 Emerging Employment Program Markets in 2025"</h3>
-                            <p>Discover the top five employment markets to look out for in 2025. These markets reflect
-                                the evolving landscape of work and innovation.</p>
-                            <a href="#" class="read-more">Read More →</a>
+                        <div class="cta-illustration">
+                            <!-- Simple decorative elements resembling the UI in the prompt -->
+                            <div class="cta-ui-card">
+                                <div class="cta-ui-row">
+                                    <div class="cta-avatar"></div><span>Register as a member</span>
+                                </div>
+                            </div>
+                            <div class="cta-ui-card secondary">
+                                <div class="cta-ui-row"><span>Join local chapter</span></div>
+                            </div>
                         </div>
+                        <h3 class="cta-title">Sign up to start driving positive change today.</h3>
+                        <a href="login.html" class="cta-button">Sign up for free</a>
                     </div>
                 </div>
             </div>
+            </div>
         </section>
-
-
 
     </main>
 
@@ -216,6 +292,9 @@
         </div>
         <div class="container footer-container">
             <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <img src="Ellipse 3.png" alt="United Youth Nigeria Movement Logo">
+                </a>
                 <p>United Youth Nigeria Movement (UYNM) is a transformative platform focused on empowering young
                     Nigerians with the skills, knowledge, and opportunities needed to drive positive change.</p>
             </div>
@@ -249,6 +328,9 @@
             <p>&copy; 2026 United Youth Nigeria Movement. All rights reserved.</p>
         </div>
     </footer>
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="script.js"></script>
 </body>
 

@@ -42,9 +42,16 @@
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
-                <li class="nav-item"><a href="roadmap.html" class="nav-link">Impact</a></li>
-                <li class="nav-item"><a href="get-involved.html" class="nav-link active">Get Involved</a></li>
-                <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active">Pages <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="roadmap.html" class="dropdown-item">Impact</a></li>
+                        <li><a href="get-involved.html" class="dropdown-item active">Get Involved</a></li>
+                        <li><a href="news.html" class="dropdown-item">News & Update</a></li>
+                        <li><a href="faq.html" class="dropdown-item">FAQ</a></li>
+                        <li><a href="events.html" class="dropdown-item">Events</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item mobile-only"><a href="login.html" class="nav-link login-btn">Sign Up</a></li>
                 <li class="nav-item mobile-only"><a href="contact.html" class="nav-contact-btn">Contact Us</a></li>
             </ul>
@@ -60,155 +67,208 @@
             <div class="page-header-bg" style="background-image: url('hero_slide_2.png');"></div>
             <div class="page-header-overlay"></div>
             <div class="container page-header-content reveal-up">
-                <h1 class="hero-title" style="margin-bottom: 16px; padding-top: 50px;">Get <span>Involved</span></h1>
-                <p class="section-subtitle" style="color: var(--accent-gold); margin-bottom: 30px;">Shape the Future of
-                    Nigeria</p>
+                <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 20px;">Get <span>Involved</span></h1>
+                <p class="hero-description" style="margin: 0 auto 35px; font-size: 1.0rem; max-width: 800px;">
+                    Join thousands of young Nigerians dedicated to transforming our nation through active leadership and
+                    civic engagement. Your journey starts here.
+                </p>
                 <div class="hero-buttons">
-                    <a href="#join-form" class="btn btn-primary">Join Now</a>
-                    <a href="about.html" class="btn btn-outline" style="border-color: white; color: white;">Learn
-                        More</a>
+                    <a href="#join-form" class="btn btn-primary">Start Your Journey</a>
+                    <a href="#tracks" class="btn btn-outline" style="min-width: 180px;">View Tracks</a>
                 </div>
             </div>
         </section>
 
-        <!-- Engagement Pillars -->
-        <section class="engagement-section reveal">
+        <!-- Involvement Tracks Grid -->
+        <section class="involvement-tracks reveal" id="tracks">
             <div class="container">
-                <div style="text-align: center; max-width: 800px; margin: 0 auto 60px;">
-                    <p class="section-subtitle">Ways to Join</p>
-                    <h2 class="section-title">Become Part of the <span>Movement</span></h2>
-                    <p style="color: var(--text-gray);">Whether you're a student, a professional, or an organization,
-                        there's a place for you in our mission to transform Nigeria through youth empowerment.</p>
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+                    <p class="section-subtitle">Choose Your Path</p>
+                    <h2 class="section-title">Ways to <span>Join the Movement</span></h2>
+                    <p style="color: var(--text-light); font-size: 1.0rem; line-height: 1.8;">
+                        Whether you're looking to volunteer your time, partner professionally, or join as a member,
+                        there's a place for you in our mission to rebuild Nigeria.
+                    </p>
                 </div>
 
-                <div class="engagement-grid">
+                <div class="involvement-grid">
                     <!-- Volunteer -->
-                    <a href="#join-form" class="engagement-card-link">
-                        <div class="engagement-card">
-                            <div class="pillar-icon"><i class="fas fa-hands-helping"></i></div>
-                            <h3>Volunteer</h3>
-                            <p>Dedicate your time and skills to support our grassroots projects and community outreaches
-                                across the nation.</p>
+                    <div class="involvement-card">
+                        <div class="involvement-icon">
+                            <i class="fas fa-hands-helping"></i>
                         </div>
-                    </a>
+                        <h3>Volunteer</h3>
+                        <p>Lend your skills and time to our local chapters and national initiatives. Gain hands-on
+                            experience in community development.</p>
+                        <a href="#join-form" class="involvement-cta">Apply as Volunteer <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+
                     <!-- Partner -->
-                    <a href="#join-form" class="engagement-card-link">
-                        <div class="engagement-card">
-                            <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
-                            <h3>Partner</h3>
-                            <p>Collaborate with us as an organization or institution to scale our impact and create new
-                                opportunities for youth.</p>
+                    <div class="involvement-card">
+                        <div class="involvement-icon">
+                            <i class="fas fa-handshake"></i>
                         </div>
-                    </a>
+                        <h3>Strategic Partner</h3>
+                        <p>Collaborate with us to scale social impact projects, provide resources, or sponsor youth
+                            empowerment programs nationwide.</p>
+                        <a href="#join-form" class="involvement-cta">Become a Partner <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+
                     <!-- Member -->
-                    <a href="#join-form" class="engagement-card-link">
-                        <div class="engagement-card">
-                            <div class="pillar-icon"><i class="fas fa-user-plus"></i></div>
-                            <h3>Become a Member</h3>
-                            <p>Join our growing family of young Nigerians committed to personal growth and national
-                                development.</p>
+                    <div class="involvement-card">
+                        <div class="involvement-icon">
+                            <i class="fas fa-users"></i>
                         </div>
-                    </a>
-                    <!-- Mentor -->
-                    <a href="#join-form" class="engagement-card-link">
-                        <div class="engagement-card">
-                            <div class="pillar-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                            <h3>Mentor</h3>
-                            <p>Share your wisdom and experience to guide the next generation of Nigerian leaders and
-                                entrepreneurs.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Impact Through Engagement -->
-        <section class="engagement-impact reveal">
-            <div class="container">
-                <div class="impact-content-box">
-                    <div class="impact-text">
-                        <p class="section-subtitle" style="text-align: left;">Why Your Involvement Matters</p>
-                        <h2 class="section-title title-left" style="margin-bottom: 30px;">Your Contribution <span>Drives
-                                Change</span></h2>
-                        <p style="margin-bottom: 25px; color: var(--text-gray); line-height: 1.8;">The United Youth
-                            Nigeria Movement is powered by the collective energy of individuals like you. By getting
-                            involved, you're not just joining an organization; you're becoming part of a nationwide
-                            solution to civic stagnation and economic challenges.</p>
-                        <ul style="list-style: none; padding: 0;">
-                            <li
-                                style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px; color: var(--primary-blue); font-weight: 500;">
-                                <i class="fas fa-check-circle" style="color: var(--accent-gold);"></i> Build valuable
-                                leadership and professional networks.
-                            </li>
-                            <li
-                                style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px; color: var(--primary-blue); font-weight: 500;">
-                                <i class="fas fa-check-circle" style="color: var(--accent-gold);"></i> Direct
-                                participation in national development projects.
-                            </li>
-                            <li
-                                style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px; color: var(--primary-blue); font-weight: 500;">
-                                <i class="fas fa-check-circle" style="color: var(--accent-gold);"></i> Access to
-                                exclusive training and empowerment resources.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="impact-image-container">
-                        <img src="hero_slide_1.png" alt="Youth Engagement">
+                        <h3>Community Member</h3>
+                        <p>Gain full access to our digital platform, exclusive training materials, and a nationwide
+                            network of
+                            peers and mentors.</p>
+                        <a href="#join-form" class="involvement-cta">Join Community <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Join Form Section -->
-        <section class="join-form-section reveal" id="join-form">
+        <!-- Why Join (Benefit Section) -->
+        <section class="why-join-section reveal">
             <div class="container">
-                <div class="form-wrapper">
-                    <div style="text-align: center; margin-bottom: 30px;">
-                        <h2 class="section-title">Join the <span>United Movement</span></h2>
-                        <p style="color: var(--text-gray); font-size: 0.95rem;">Fill out the form below to start your
-                            journey with us.</p>
+                <div class="why-join-container">
+                    <div class="why-join-image-wrapper">
+                        <div class="why-join-image">
+                            <img src="hero_slide_1.png" alt="Youth Engagement">
+                        </div>
+                        <div class="why-join-badge">
+                            <span class="number">10K+</span>
+                            <span class="text">Members Strong</span>
+                        </div>
                     </div>
-                    <form action="#">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="fullname">Full Name</label>
-                                <input type="text" id="fullname" class="form-control"
-                                    placeholder="Enter your full name">
+                    <div class="why-join-content">
+                        <p class="section-subtitle subtitle-left">The Value of Engagement</p>
+                        <h2 class="section-title title-left">Why Join the <span>United Youth Movement?</span></h2>
+                        <p style="color: var(--text-light); margin-bottom: 40px; font-size: 1.0rem; line-height: 1.8;">
+                            Joining UYNM is more than just registration; it's an investment in your personal growth and
+                            your country's future. We provide the tools you need to succeed.
+                        </p>
+
+                        <div class="benefits-list">
+                            <!-- Benefit 1 -->
+                            <div class="benefit-item-premium">
+                                <div class="benefit-icon-premium">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="benefit-text-premium">
+                                    <h4>Leadership Excellence</h4>
+                                    <p>Access structured curriculums designed to bake leadership DNA into every action
+                                        you
+                                        take in your community.</p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" class="form-control" placeholder="yourname@gmail.com">
+
+                            <!-- Benefit 2 -->
+                            <div class="benefit-item-premium">
+                                <div class="benefit-icon-premium">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="benefit-text-premium">
+                                    <h4>Elite Networking</h4>
+                                    <p>Connect with a high-caliber network of professionals, change-makers, and policy
+                                        influencers across Nigeria.</p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" class="form-control" placeholder="090 000 0000">
-                            </div>
-                            <div class="form-group">
-                                <label for="track">Involvement Track</label>
-                                <select id="track" class="form-control">
-                                    <option value="" disabled selected>Select a track</option>
-                                    <option value="volunteer">Volunteer</option>
-                                    <option value="partner">Partner / Organization</option>
-                                    <option value="member">Individual Member</option>
-                                    <option value="mentor">Mentor</option>
-                                </select>
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="location">Location (State/LGA)</label>
-                                <input type="text" id="location" class="form-control"
-                                    placeholder="E.g. Lagos Island, Lagos">
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="motivation">Why do you want to join UYNM?</label>
-                                <textarea id="motivation" class="form-control" rows="3"
-                                    placeholder="Tell us about your interests and goals..."></textarea>
-                            </div>
-                            <div class="form-group full-width">
-                                <button type="submit" class="btn btn-primary btn-submit-large">Join
-                                    the Movement Now</button>
+
+                            <!-- Benefit 3 -->
+                            <div class="benefit-item-premium">
+                                <div class="benefit-icon-premium">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="benefit-text-premium">
+                                    <h4>Impact Acceleration</h4>
+                                    <p>Turn your social impact ideas into reality with our resources, funding
+                                        opportunities, and strategic guidance.</p>
+                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Registration Section -->
+        <section class="join-form-wrapper-premium reveal" id="register">
+            <div class="container">
+                <div class="form-container-premium">
+                    <div class="form-info-side">
+                        <p class="section-subtitle" style="color: var(--accent-gold); text-align: left;">Registration
+                        </p>
+                        <h2>Join the <span>United Movement</span></h2>
+                        <p>Take the first step towards a better Nigeria. Fill out the form and our team will get back to
+                            you within 48 hours.</p>
+
+                        <div class="form-features-list">
+                            <div class="form-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Official Membership ID</span>
+                            </div>
+                            <div class="form-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Access to Local Chapters</span>
+                            </div>
+                            <div class="form-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Exclusive Event Invitations</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: auto; padding-top: 40px;">
+                            <p style="font-size: 0.9rem; opacity: 0.7;">Have questions? Contact our support team at
+                                <br><strong>unitedyouthofnigerian@gmail.com</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-content-side">
+                        <form action="#">
+                            <div class="form-grid-premium">
+                                <div class="form-group">
+                                    <label class="form-label-premium">Full Name</label>
+                                    <input type="text" class="form-input-premium" placeholder="e.g. John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label-premium">Email Address</label>
+                                    <input type="email" class="form-input-premium" placeholder="john@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label-premium">Phone Number</label>
+                                    <input type="tel" class="form-input-premium" placeholder="090 000 0000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label-premium">Involvement Track</label>
+                                    <select class="form-input-premium">
+                                        <option value="" disabled selected>Select a track</option>
+                                        <option value="volunteer">Volunteer</option>
+                                        <option value="partner">Partner / Organization</option>
+                                        <option value="member">Individual Member</option>
+                                        <option value="mentor">Mentor</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-full">
+                                    <label class="form-label-premium">Location (State & LGA)</label>
+                                    <input type="text" class="form-input-premium"
+                                        placeholder="e.g. Lagos Island, Lagos State">
+                                </div>
+                                <div class="form-group-full">
+                                    <label class="form-label-premium">Why do you want to join UYNM?</label>
+                                    <textarea class="form-input-premium" rows="4"
+                                        placeholder="Tell us about your passion and goals..."></textarea>
+                                </div>
+                                <div class="form-group-full">
+                                    <button type="submit" class="btn-submit-premium">Register Now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -230,6 +290,9 @@
         </div>
         <div class="container footer-container">
             <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <img src="Ellipse 3.png" alt="United Youth Nigeria Movement Logo">
+                </a>
                 <p>United Youth Nigeria Movement (UYNM) is a transformative platform focused on empowering young
                     Nigerians with the skills, knowledge, and opportunities needed to drive positive change.</p>
             </div>
@@ -263,6 +326,9 @@
             <p>&copy; 2026 United Youth Nigeria Movement. All rights reserved.</p>
         </div>
     </footer>
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="script.js"></script>
 </body>
 

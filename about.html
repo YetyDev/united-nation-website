@@ -68,9 +68,16 @@
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
                 <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
-                <li class="nav-item"><a href="roadmap.html" class="nav-link">Impact</a></li>
-                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
-                <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="roadmap.html" class="dropdown-item">Impact</a></li>
+                        <li><a href="get-involved.html" class="dropdown-item">Get Involved</a></li>
+                        <li><a href="news.html" class="dropdown-item">News & Update</a></li>
+                        <li><a href="faq.html" class="dropdown-item">FAQ</a></li>
+                        <li><a href="events.html" class="dropdown-item">Events</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item mobile-only"><a href="login.html" class="nav-link login-btn">Sign Up</a></li>
                 <li class="nav-item mobile-only"><a href="contact.html" class="nav-contact-btn">Contact Us</a></li>
             </ul>
@@ -690,7 +697,7 @@
                         <div class="leader-flag analysis-badge">NG</div>
                         <h4 class="leader-name">Chief Olusegun Obasanjo</h4>
                         <p class="leader-title">Former President of Nigeria (1999-2007)</p>
-                        <div style="display: flex; flex-direction: row;">
+                        <div class="leadership-details-container">
                             <div class="leadership-details">
                                 <h5 class="detail-heading">Leadership Style</h5>
                                 <p class="leader-description">A mix of authoritarianism and populism, characterized by
@@ -723,7 +730,7 @@
                         <h4 class="leader-name">Gen Buba Marwa</h4>
                         <p class="leader-title">Chairman, National Drug Law Enforcement Agency (NDLEA)</p>
 
-                        <div style="display: flex; flex-direction: row;">
+                        <div class="leadership-details-container">
                             <div class="leadership-details">
                                 <h5 class="detail-heading">Leadership Style</h5>
                                 <p class="leader-description">Marked by a focus on accountability and reform.
@@ -756,7 +763,7 @@
                         <h4 class="leader-name">Sen George Akume</h4>
                         <p class="leader-title">Minister of Special Duties & Inter-Governmental Affairs</p>
 
-                        <div style="display: flex; flex-direction: row;">
+                        <div class="leadership-details-container">
                             <div class="leadership-details">
                                 <h5 class="detail-heading">Leadership Style</h5>
                                 <p class="leader-description">Characterized by neutrality and an approachable,
@@ -815,71 +822,77 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section id="register" class="register-section reveal">
-            <div class="container register-container">
-                <div class="register-text-col">
-                    <p class="section-subtitle" style="text-align: left;">Join UYNM</p>
-                    <h2 class="register-title">Ready to Transform <span>Your Future?</span></h2>
-                    <p class="register-description">
-                        Take the first step towards becoming a leader and change-maker. Our programs are open to all
-                        young Nigerians committed to personal growth and national development.
-                    </p>
-                    <p class="register-description">
-                        Applications are reviewed on a rolling basis. Don't miss this opportunity!
-                    </p>
-                </div>
+        <!-- Premium Registration Section -->
+        <section class="join-form-wrapper-premium reveal" id="register">
+            <div class="container">
+                <div class="form-container-premium">
+                    <div class="form-info-side">
+                        <p class="section-subtitle" style="color: var(--accent-gold); text-align: left;">Registration
+                        </p>
+                        <h2>Join the <span>United Movement</span></h2>
+                        <p>Take the first step towards a better Nigeria. Fill out the form and our team will get back to
+                            you within 48 hours.</p>
 
-                <div class="register-form-col">
-                    <div class="register-form-box">
+                        <div class="form-features-list">
+                            <div class="form-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Official Membership ID</span>
+                            </div>
+                            <div class="form-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Access to Local Chapters</span>
+                            </div>
+                            <div class="form-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Exclusive Event Invitations</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: auto; padding-top: 40px;">
+                            <p style="font-size: 0.9rem; opacity: 0.7;">Have questions? Contact our support team at
+                                <br><strong>unitedyouthofnigerian@gmail.com</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-content-side">
                         <form action="#">
-                            <div class="form-group">
-                                <label for="fullname">Full Name</label>
-                                <input type="text" id="fullname" class="form-control"
-                                    placeholder="Enter your full name">
+                            <div class="form-grid-premium">
+                                <div class="form-group">
+                                    <label class="form-label-premium">Full Name</label>
+                                    <input type="text" class="form-input-premium" placeholder="e.g. John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label-premium">Email Address</label>
+                                    <input type="email" class="form-input-premium" placeholder="john@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label-premium">Phone Number</label>
+                                    <input type="tel" class="form-input-premium" placeholder="090 000 0000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label-premium">Involvement Track</label>
+                                    <select class="form-input-premium">
+                                        <option value="" disabled selected>Select a track</option>
+                                        <option value="volunteer">Volunteer</option>
+                                        <option value="partner">Partner / Organization</option>
+                                        <option value="member">Individual Member</option>
+                                        <option value="mentor">Mentor</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-full">
+                                    <label class="form-label-premium">Location (State & LGA)</label>
+                                    <input type="text" class="form-input-premium"
+                                        placeholder="e.g. Lagos Island, Lagos State">
+                                </div>
+                                <div class="form-group-full">
+                                    <label class="form-label-premium">Why do you want to join UYNM?</label>
+                                    <textarea class="form-input-premium" rows="4"
+                                        placeholder="Tell us about your passion and goals..."></textarea>
+                                </div>
+                                <div class="form-group-full">
+                                    <button type="submit" class="btn-submit-premium">Register Now</button>
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" class="form-control" placeholder="yourname@gmail.com">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" class="form-control" placeholder="090 000 0000">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="program">Select Program</label>
-                                <select id="program" class="form-control">
-                                    <option value="" disabled selected>Choose a program</option>
-                                    <option value="leadership">Leadership Development</option>
-                                    <option value="entrepreneurship">Entrepreneurship & Innovation</option>
-                                    <option value="civic">Civic Engagement & Advocacy</option>
-                                    <option value="skills">Skills & Career Development</option>
-                                    <option value="digital">Digital Literacy & Tech</option>
-                                    <option value="women">Women in Leadership</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="location">Location (State/LGA)</label>
-                                <input type="text" id="location" class="form-control"
-                                    placeholder="E.g. Lagos Island, Lagos">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="motivation">Why do you want to join this program?</label>
-                                <textarea id="motivation" class="form-control" rows="4"
-                                    placeholder="Tell us about your goals..."></textarea>
-                            </div>
-
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="terms">
-                                <label for="terms">I agree to terms and conditions</label>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-register">Join the Program Now</button>
                         </form>
                     </div>
                 </div>
@@ -906,6 +919,9 @@
         </div>
         <div class="container footer-container">
             <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <img src="Ellipse 3.png" alt="United Youth Nigeria Movement Logo">
+                </a>
                 <p>United Youth Nigeria Movement (UYNM) is a transformative platform focused on empowering young
                     Nigerians with the skills, knowledge, and opportunities needed to drive positive change.</p>
             </div>
@@ -939,6 +955,9 @@
             <p>&copy; 2026 United Youth Nigeria Movement. All rights reserved.</p>
         </div>
     </footer>
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="script.js"></script>
 </body>
 

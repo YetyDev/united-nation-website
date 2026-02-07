@@ -38,9 +38,16 @@
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
-                <li class="nav-item"><a href="roadmap.html" class="nav-link">Impact</a></li>
-                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
-                <li class="nav-item"><a href="news.html" class="nav-link">News & Update</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active">Pages <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="roadmap.html" class="dropdown-item">Impact</a></li>
+                        <li><a href="get-involved.html" class="dropdown-item">Get Involved</a></li>
+                        <li><a href="news.html" class="dropdown-item">News & Update</a></li>
+                        <li><a href="faq.html" class="dropdown-item">FAQ</a></li>
+                        <li><a href="events.html" class="dropdown-item">Events</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item mobile-only"><a href="login.html" class="nav-link login-btn">Sign Up</a></li>
                 <li class="nav-item mobile-only"><a href="contact.html" class="nav-contact-btn">Contact Us</a></li>
             </ul>
@@ -66,10 +73,61 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container footer-bottom">
+        <div id="newsletter" class="newsletter">
+            <div class="container newsletter-container">
+                <div class="newsletter-text">
+                    <h2 class="section-title" style="color: var(--text-white); margin-bottom: 20px;">Stay
+                        <span>Updated</span>
+                    </h2>
+                    <p>Stay up to date on our Empowerment, events, research and more</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <img src="Ellipse 3.png" alt="United Youth Nigeria Movement Logo">
+                </a>
+                <p>United Youth Nigeria Movement (UYNM) is a transformative platform focused on empowering young
+                    Nigerians with the skills, knowledge, and opportunities needed to drive positive change.</p>
+            </div>
+            <div class="footer-col" style="padding-left: 20px;">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="news.html">News & Update</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get in touch with us</h4>
+                <p>For More Information, Kindly Get in touch with us. Nigeria</p>
+                <p><i class="fas fa-phone"></i> Phone: 09046647990</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-yahoo"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61587573413514" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@unitedyouthofnigmovement?is_from_webapp=1&sender_device=pc"
+                        target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/unitedyouthofnigeriamovement/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2026 United Youth Nigeria Movement. All rights reserved.</p>
         </div>
     </footer>
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="script.js"></script>
 </body>
 

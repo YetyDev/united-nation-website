@@ -151,10 +151,13 @@
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
     background: #fafbfc;
+    padding: 0 25px;
+    /* Default closed padding */
 }
 
 .faq-item.active .faq-answer {
-    max-height: 500px;
+    /* max-height is handled by JS for smooth animation */
+    /* padding is handled here or by JS - preferred here but 0 in default state */
     padding: 20px 25px;
     border-top: 1px solid #eee;
 }
