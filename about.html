@@ -7,6 +7,7 @@
     <title>About Us - United Youth Nigeria Movement</title>
     <meta name="description"
         content="Learn about the United Youth Nigeria Movement, our mission, vision, and core values.">
+    <meta name="theme-color" content="#263B5E">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +42,7 @@
             </div>
             <div class="top-social-icons">
                 <a href="#" aria-label="Yahoo"><i class="fab fa-yahoo"></i></a>
-                <a href="mailto:unitedyouthofnigerian@gmail.com" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:uyonm2026@gmail.com" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
                 <a href="https://web.facebook.com/profile.php?id=61587573413514" aria-label="Facebook"
                     target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.tiktok.com/@unitedyouthofnigmovement?is_from_webapp=1&sender_device=pc"
@@ -92,7 +93,7 @@
     <main>
         <!-- Page Header -->
         <section class="page-header"
-            style="background-image: url(hero-bg.png); background-size: cover; background-position: center;">
+            style="background-image: url(hero_slide_2.png); background-size: cover; background-position: center;">
             <div class="page-header-overlay"></div>
             <div class="container page-header-content" style="text-align: center;">
                 <h1 class="hero-title" style="margin-bottom: 5px;">About Us</h1>
@@ -102,12 +103,12 @@
         </section>
 
         <!-- About Section Content -->
-        <section id="about" class="about-page-section reveal" style="padding: 80px 0;">
-            <div class="container about-page-container">
+        <section id="about" class="about-redesign-section reveal">
+            <div class="container about-redesign-container">
                 <!-- Left Column: Visuals -->
                 <div class="about-visuals">
                     <div class="main-image-container">
-                        <img src="hero_slide_1.png" alt="UYNM Team" class="about-main-img">
+                        <img src="uynm.png" alt="UYNM Team" class="about-main-img">
                         <div class="floating-badge">
                             <div class="badge-avatars">
                                 <img src="p1_1769949407060.png" alt="Member">
@@ -155,25 +156,27 @@
         <section id="mvv-section" class="mvv-section reveal">
             <div class="container">
                 <h2 class="section-title">Our Mission, Vision <span>& Core Values</span></h2>
-                <div class="mv-cards">
-                    <!-- Mission Card -->
-                    <div class="mv-card">
-                        <div class="mv-icon">
+                <div class="mv-about-grid">
+                    <!-- Mission Item -->
+                    <div class="mv-about-item mission-item">
+                        <div class="mv-about-icon">
                             <i class="fas fa-bullseye"></i>
                         </div>
-                        <h3>Our Mission</h3>
-                        <p>To identify, nurture, and empower young Nigerians who are committed to making a positive
+                        <h3 class="mv-about-title">Our Mission</h3>
+                        <p class="mv-about-desc">To identify, nurture, and empower young Nigerians who are committed to
+                            making a positive
                             impact on their communities and the country at large. We will provide a platform for youth
                             to engage, collaborate, and develop the skills and networks necessary to drive change.</p>
                     </div>
 
-                    <!-- Vision Card -->
-                    <div class="mv-card">
-                        <div class="mv-icon">
+                    <!-- Vision Item -->
+                    <div class="mv-about-item vision-item">
+                        <div class="mv-about-icon">
                             <i class="fas fa-eye"></i>
                         </div>
-                        <h3>Our Vision</h3>
-                        <p>A Nigeria where young people are empowered to lead, innovate, and drive sustainable
+                        <h3 class="mv-about-title">Our Vision</h3>
+                        <p class="mv-about-desc">A Nigeria where young people are empowered to lead, innovate, and drive
+                            sustainable
                             development. A country where meritocracy, inclusivity, and justice are the hallmarks of
                             governance and social progress for all citizens.</p>
                     </div>
@@ -181,27 +184,63 @@
             </div>
 
             <!-- Core Values Banner -->
-            <div class="core-values-banner">
-                <div class="container cv-grid">
-                    <div class="cv-title">
-                        <h2>Our Core <br>Values</h2>
+            <!-- Core Values Section (Redesigned for About Page) -->
+            <div class="core-values-about-section">
+                <div class="cv-about-header">
+                    <h2>Our Core <span>Values</span></h2>
+                    <p style="max-width: 600px; margin: 0 auto; color: var(--text-gray); font-size: 0.95rem;">Guiding
+                        principles that define
+                        our culture and drive our impact.</p>
+                </div>
+                <div class="cv-minimal-grid">
+                    <!-- Inclusivity -->
+                    <div class="cv-minimal-item">
+                        <div class="cv-minimal-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="cv-minimal-title">Inclusivity</h4>
+                        <p class="cv-minimal-desc">Embracing Nigerian diversity and promoting unity across all tribes
+                            and regions.</p>
                     </div>
-                    <div class="cv-list">
-                        <div class="cv-item">
-                            <strong>Inclusivity :</strong> Embracing Nigerian diversity and promoting unity
+
+                    <!-- Meritocracy -->
+                    <div class="cv-minimal-item">
+                        <div class="cv-minimal-icon">
+                            <i class="fas fa-award"></i>
                         </div>
-                        <div class="cv-item">
-                            <strong>Meritocracy :</strong> Leadership based on competence and integrity
+                        <h4 class="cv-minimal-title">Meritocracy</h4>
+                        <p class="cv-minimal-desc">Leadership based strictly on competence, integrity, and proven track
+                            records.</p>
+                    </div>
+
+                    <!-- Innovation -->
+                    <div class="cv-minimal-item">
+                        <div class="cv-minimal-icon">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
-                        <div class="cv-item">
-                            <strong>Innovation :</strong> Encouraging creativity and problem-solving
+                        <h4 class="cv-minimal-title">Innovation</h4>
+                        <p class="cv-minimal-desc">Encouraging creativity and modern problem-solving to address national
+                            challenges.</p>
+                    </div>
+
+                    <!-- Accountability -->
+                    <div class="cv-minimal-item">
+                        <div class="cv-minimal-icon">
+                            <i class="fas fa-file-contract"></i>
                         </div>
-                        <div class="cv-item">
-                            <strong>Accountability :</strong> Promoting transparency and good governance
+                        <h4 class="cv-minimal-title">Accountability</h4>
+                        <p class="cv-minimal-desc">Promoting transparency, responsibility, and good governance at all
+                            levels.</p>
+                    </div>
+
+                    <!-- Global Citizenship -->
+                    <div class="cv-minimal-item">
+                        <div class="cv-minimal-icon">
+                            <i class="fas fa-globe-africa"></i>
                         </div>
-                        <div class="cv-item">
-                            <strong>Global citizenship :</strong> Preparing youths for global engagement
-                        </div>
+                        <h4 class="cv-minimal-title">Global Citizenship</h4>
+                        <p class="cv-minimal-desc">Preparing Nigerian youths for competitive global engagement and
+                            relevance.</p>
                     </div>
                 </div>
             </div>
@@ -850,7 +889,7 @@
 
                         <div style="margin-top: auto; padding-top: 40px;">
                             <p style="font-size: 0.9rem; opacity: 0.7;">Have questions? Contact our support team at
-                                <br><strong>unitedyouthofnigerian@gmail.com</strong>
+                                <br><strong>uyonm2026@gmail.com</strong>
                             </p>
                         </div>
                     </div>

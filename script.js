@@ -497,3 +497,84 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize
     setTimeout(setupCarousel, 100);
 });
+
+// Core Values Carousel Logic (About Page)
+document.addEventListener('DOMContentLoaded', () => {
+    const cvCarousel = document.getElementById('cv-carousel');
+    const cvPrev = document.getElementById('cv-prev');
+    const cvNext = document.getElementById('cv-next');
+    const cvDotsContainer = document.getElementById('cv-dots');
+
+    if (!cvCarousel || !cvPrev || !cvNext) return;
+
+    const cards = Array.from(cvCarousel.querySelectorAll('.cv-about-card'));
+
+    if (cards.length === 0) return;
+
+    // Create dots
+    cards.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('cv-dot');
+        if (index === 0) dot.classList.add('active');
+
+        dot.addEventListener('click', () => {
+            scrollToIndex(index);
+        });
+
+        cvDotsContainer.appendChild(dot);
+    });
+
+    const scrollToIndex = (index) => {
+        // Calculate scroll position
+        // Ideally center the card or align left
+        // Simple align left for now, taking into account gap
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 30; // from CSS
+        const scrollAmount = index * (cardWidth + gap);
+
+        cvCarousel.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    };
+
+    const updateActiveDot = () => {
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 30;
+        const scrollPos = cvCarousel.scrollLeft;
+        const index = Math.round(scrollPos / (cardWidth + gap));
+
+        const dots = document.querySelectorAll('.cv-dot');
+        dots.forEach((dot, i) => {
+            if (i === index) dot.classList.add('active');
+            else dot.classList.remove('active');
+        });
+
+        // Update button states
+        if (cvPrev) cvPrev.style.opacity = index === 0 ? '0.5' : '1';
+        if (cvPrev) cvPrev.style.pointerEvents = index === 0 ? 'none' : 'auto';
+
+        if (cvNext) cvNext.style.opacity = index >= cards.length - 1 ? '0.5' : '1';
+        if (cvNext) cvNext.style.pointerEvents = index >= cards.length - 1 ? 'none' : 'auto';
+    }
+
+    cvCarousel.addEventListener('scroll', () => {
+        // Debounce or just run? Update dots on scroll
+        updateActiveDot();
+    });
+
+    cvNext.addEventListener('click', () => {
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 30;
+        cvCarousel.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+    });
+
+    cvPrev.addEventListener('click', () => {
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 30;
+        cvCarousel.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+    });
+
+    // Initial update
+    updateActiveDot();
+});
