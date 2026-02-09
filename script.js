@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
-            if (window.innerWidth <= 992) {
+            if (window.innerWidth <= 1024) {
                 e.preventDefault();
                 const parent = toggle.closest('.nav-item.dropdown');
                 parent.classList.toggle('active');
@@ -40,12 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close menu when clicking a link
-    document.querySelectorAll('.nav-link').forEach(link => {
+    // Close menu when clicking any link inside the nav menu (but skip dropdown toggles on mobile)
+    document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            mobileMenuBtn.classList.remove('active');
-            navbar.classList.remove('mobile-open');
+            // If it's a dropdown toggle on mobile, don't close the menu
+            if (link.classList.contains('dropdown-toggle') && window.innerWidth <= 1024) {
+                return;
+            }
+
+            if (navMenu) navMenu.classList.remove('active');
+            if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
+            if (navbar) navbar.classList.remove('mobile-open');
         });
     });
 
