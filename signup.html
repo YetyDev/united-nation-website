@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - United Youth Nigeria Movement</title>
+    <meta name="description"
+        content="Join the United Youth Nigeria Movement. Create an account to start your journey of impact.">
+    <meta name="theme-color" content="#263B5E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css?v=1">
+    <link rel="stylesheet" href="auth-styles.css">
+</head>
+
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-info-bar">
+        <div class="container top-info-container">
+            <div class="phone-info">
+                <i class="fas fa-phone-alt"></i>
+                <span>Phone: 09046647990</span>
+            </div>
+            <div class="top-search-bar">
+                <input type="text" placeholder="Search..." class="top-search-input">
+                <button class="top-search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="top-social-icons">
+                <a href="#" aria-label="Yahoo"><i class="fab fa-yahoo"></i></a>
+                <a href="mailto:uyonm2026@gmail.com" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+                <a href="https://web.facebook.com/profile.php?id=61587573413514" aria-label="Facebook"
+                    target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@unitedyouthofnigmovement" aria-label="TikTok" target="_blank"><i
+                        class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/unitedyouthofnigeriamovement/" aria-label="Instagram"
+                    target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-solid" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="Ellipse 3.png" alt="United Youth Nigeria Movement Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="roadmap.html" class="dropdown-item">Impact</a></li>
+                        <li><a href="get-involved.html" class="dropdown-item">Get Involved</a></li>
+                        <li><a href="news.html" class="dropdown-item">News & Update</a></li>
+                        <li><a href="faq.html" class="dropdown-item">FAQ</a></li>
+                        <li><a href="events.html" class="dropdown-item">Events</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mobile-only"><a href="signup.html" class="nav-link login-btn active">Sign Up</a>
+                </li>
+                <li class="nav-item mobile-only"><a href="contact.html" class="nav-contact-btn">Contact Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="signup.html" class="nav-link login-btn active">Sign Up</a>
+                <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="auth-page">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h2>Join UYNM</h2>
+                    <p>Be part of the movement for a greater Nigeria</p>
+                </div>
+                <div class="auth-body">
+                    <form action="#" class="auth-form">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter your full name" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Phone Number</label>
+                                <div class="input-group">
+                                    <input type="tel" class="form-control" placeholder="090 000 0000" required>
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">State of Residence</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="e.g. Lagos" required>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Create Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" placeholder="Min. 8 characters" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-auth">Create Account</button>
+
+
+                    </form>
+
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="login.html">Log In</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="Ellipse 3.png" alt="United Youth Nigeria Movement Logo">
+                    </a>
+                    <p class="brand-desc">United Youth Nigeria Movement (UYNM) is a transformative platform focused on
+                        empowering young Nigerians to drive positive change.</p>
+                    <div class="footer-social-links">
+                        <a href="https://web.facebook.com/profile.php?id=61587573413514" class="social-link"
+                            target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/unitedyouthofnigeriamovement/" class="social-link"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@unitedyouthofnigmovement" class="social-link"
+                            target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="mailto:uyonm2026@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="news.html">News & Updates</a></li>
+                        <li><a href="events.html">Upcoming Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="roadmap.html">Our Impact</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Abuja, Nigeria</span></li>
+                        <li><i class="fas fa-phone-alt"></i> <span>0904647990</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>uyonm2026@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 United Youth Nigeria Movement. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Toggle Mobile Menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('is-active');
+        });
+    </script>
+</body>
+
+</html>
